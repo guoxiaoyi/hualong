@@ -19,7 +19,7 @@ $yellow : #eb9327;
   width:$width;
   margin:0 auto;
 }
-div.nav{
+.nav{
   @extend .min_width;
   width:100%;
   min-width: $width;
@@ -34,7 +34,7 @@ div.nav{
       display: inline-block;
       line-height:60px;
       &:hover{
-        background:$yellow
+        background:#083756
       }
     }
   }

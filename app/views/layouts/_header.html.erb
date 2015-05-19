@@ -1,12 +1,12 @@
 <div class="nav">
   <ul class="container">
-    <li class="on"><a href="#">首页</a></li>
-    <li><a href="#">组织机构</a></li>
-    <li><a href="#">论坛动态</a></li>
-    <li><a href="#">研究成果</a></li>
-    <li><a href="#">媒体动态</a></li>
-    <li><a href="#">学术委员会</a></li>
-    <li><a href="#">企业委员会</a></li>
-    <li><a href="#">联系我们</a></li>
+    <li class="<%= "on" if "#{controller_name}/#{action_name}" == "welcome/index" %>"><%= link_to "首页", root_path %></li>
+    <li class="<%= "on" if request.fullpath =~ /organ/ %>"><%= link_to "组织机构", article_category_articles_path(:organ) %></li>
+    <li class="<%= "on" if request.fullpath =~ /bbs/ %>"><%= link_to "论坛动态", article_category_articles_path(:bbs) %></li>
+    <li class="<%= "on" if request.fullpath =~ /study/ %>"><%= link_to "研究成果", article_category_articles_path(:study) %></li>
+    <li class="<%= "on" if request.fullpath =~ /news/ %>"><%= link_to "媒体动态", article_category_articles_path(:news) %></li>
+    <li class="<%= "on" if request.fullpath =~ /learning/ %>"><%= link_to "学术委员会", article_category_articles_path(:learning) %></li>
+    <li class="<%= "on" if request.fullpath =~ /enterprise/ %>"><%= link_to "企业委员会", article_category_articles_path(:enterprise) %></li>
+    <li><%= link_to "联系我们", page_path(:contact_us) %></li>
   </ul>
 </div>

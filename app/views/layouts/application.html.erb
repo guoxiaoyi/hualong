@@ -2,12 +2,14 @@
 <html>
 <head>
   <title>Obor100</title>
+  <meta charest="utf-8">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
-
+<%= render "layouts/header" %>
 <%= yield %>
 
 </body>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= Activity.human_attribute_name(:title) %>:</strong>
+  <%= @activity.title %>
+</p>
+
+<p>
+  <strong><%= Activity.human_attribute_name(:activity_category_id) %>:</strong>
+  <%= @activity.activity_category.try :name %>
+  <%#= activity.activity_category.try :name%>
+</p>
+
+<p>
+  <strong><%= Activity.human_attribute_name(:start_time) %>:</strong>
+  <%= @activity.start_time %>
+</p>
+
+<p>
+  <strong><%= Activity.human_attribute_name(:end_time) %>:</strong>
+  <%= @activity.end_time %>
+</p>
+
+<p>
+  <strong><%= Activity.human_attribute_name(:teacher_limit) %>:</strong>
+  <%= @activity.teacher_limit %>
+</p>
+
+<p>
+  <strong><%= Activity.human_attribute_name(:content) %>:</strong>
+  <%= @activity.content %>
+</p>
+
+<%= link_to t('buttons.edit'), edit_admin_activity_path(@activity) %> |
+<%= link_to t('buttons.back'), admin_activities_path %>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>教师发展中心 后台管理</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <%= stylesheet_link_tag    "admin/application", media: "all" %>
+  <%= javascript_include_tag "kindeditor/kindeditor" %>
+  <%= csrf_meta_tags %>
+  <!-- Just for debugging purposes. Don't actually copy this line! -->
+  <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- Wrap all page content here -->
+  <div id="wrap">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to "教师发展中心 网站后台", main_app.admin_path, class: 'navbar-brand' %>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <%# p Settings.admin_menu %>
+            <% AdminMenu.roots.each do |am| %>
+            <%# p m.model %>
+            <li class="<%= 'active' if am.root_current?(controller_name) %>" >
+              <%
+                _admin_path = begin
+                  send(am.engine).send("admin_#{am.pluralize}_path")
+                rescue
+                  '#nogo'
+                end
+              %>
+              <%= link_to am.name, _admin_path %>
+            </li>
+            <% end %>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">系统管理 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "管理员管理", main_app.admin_managers_path %></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">数据管理</li>
+                <li><%= link_to "附件管理", main_app.admin_path %></li>
+                <li><a href="#">备份管理</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav pull-right">
+            <li><%= link_to "网站首页", main_app.root_path %></li>
+            <li><%#= link_to current_manager.name, "#user" %></li>
+            <li><%= link_to "退出", main_app.admin_destroy_session_path %></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+
+      </div>
+    </div>
+
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <%= render file: 'layouts/admin_submenu' %>
+        </div>
+        <div class="col-md-10">
+          <div class="row">
+            <ol class="breadcrumb">
+              <li><a href="#">后台</a></li>
+              <li>
+                <a href="<%= url_for controller: controller_name, action: controller_name == 'application' ? action_name : 'index' -%>">
+                  <%= begin AdminMenu.get_current( controller_name ).name rescue '控制' end -%>
+                </a>
+              </li>
+              <li class="active"><%= t "actions.#{action_name}" %></li>
+            </ol>
+          </div>
+          <div class="wrap">
+            <div class="row">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">技术支持：大连智慧云科技有限公司.  后台仅支持： 谷歌（Chrome），Safari，火狐（Firefox，IE8及以上版本浏览器。</p>
+    </div>
+  </div>
+  <%= javascript_include_tag "admin/application" %>
+</body>
+</html>

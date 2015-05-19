@@ -1,0 +1,32 @@
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th><%= Manager.human_attribute_name(:name) %></th>
+      <th><%= Manager.human_attribute_name(:email) %></th>
+      <th><%= Manager.human_attribute_name(:supper) %></th>
+      <th><%= Manager.human_attribute_name(:disabled) %></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @managers.each do |manager| %>
+      <tr>
+        <td><%= manager.name %></td>
+        <td><%= manager.email %></td>
+
+        <td><%= manager.supper %></td>
+        <td><%= manager.disabled %></td>
+        <td><%= link_to t('actions.show'), [:admin, manager] %></td>
+        <td><%= link_to t('actions.edit'), edit_admin_manager_path(manager) %></td>
+        <td><%= link_to t('actions.destroy'), [:admin, manager], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "#{t('actions.new')}#{Manager.model_name.human}", new_admin_manager_path, class: 'btn btn-default' %>

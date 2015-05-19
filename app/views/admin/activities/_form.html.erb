@@ -1,0 +1,24 @@
+<%= simple_form_for([:admin, @activity], wrapper: :bootstrap3) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <%= f.input :activity_category_id, collection: ActivityCategory.tree.unshift(ActivityCategoryRoot.new), label_method: :tree_select_name, prompt: "请选择父类别"  %>
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <%= f.input :teacher_limit %>
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <%= f.input :start_time, as: :string, input_html: { class: 'datepicker'} %>
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <%= f.input :end_time, as: :string, input_html: { class: 'datepicker'}%>
+    </div>
+    <%= f.input :content,:as => :kindeditor, :label => false, :input_html => { :width => '100%', :height => 300 } %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

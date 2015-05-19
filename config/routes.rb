@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -53,4 +55,19 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  mount WizcmsArticle::Engine, :at => "/"
+  mount WizcmsLink::Engine, :at => "/"
+  namespace :admin do
+    get '/' => 'application#portal'
+
+    get '/login' => 'application#login'
+    post '/create_session' => 'application#create_session'
+    match '/destroy_session' => 'application#destroy_session', via: [:get,:post]
+
+    resources :managers
+    resources :activity_categories
+    resources :activities
+    resources :teacher_activities
+  end
 end

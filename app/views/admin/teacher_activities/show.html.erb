@@ -1,0 +1,32 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th colspan="6" class="text-center"><%= @teacher_activity.title %></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>姓名</th>
+      <th>报名时间</th>
+      <th>学院</th>
+      <th>电话</th>
+      <th>附件</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @teacher_activities.each.with_index do |a,i|%>
+      <tr>
+        <td><%= sprintf("%02d", i + 1) %></td>
+        <td><%= a.teacher.name %></td>
+        <td><%= a.created_at.strftime("%F %T") %></td>
+        <td><%= a.college %></td>
+        <td><%= a.contact %></td>
+        <% if a.attachment.blank? %>
+            <td>没有附件</td>
+          <% else%>
+        <td> <%= link_to "下载", "#{a.attachment}" %> </td>
+        <% end %>
+      </tr>
+  <% end -%>
+  </tbody>
+</table>
+

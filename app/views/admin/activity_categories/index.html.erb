@@ -1,0 +1,37 @@
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>层级</th>
+      <th>类别名称</th>
+      <th>自定义排序</th>
+      <th>父类别</th>
+      <th>简介</th>
+      <th>是否发布</th>
+      <th>更新时间</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activity_categories.each do |activity_category| %>
+      <tr>
+        <td><%= activity_category.level %></td>
+        <td><%= link_to activity_category.tree_select_name, [:admin, activity_category] %></td>
+        <td><%= activity_category.custom_order %></td>
+        <td><%= activity_category.parent_id %></td>
+        <td><%= activity_category.brief %></td>
+        <td><%= activity_category.published %></td>
+        <td><%= activity_category.updated_at %></td>
+        <td>
+          <%= link_to t('actions.show'), [:admin, activity_category] %>
+          <%= link_to t('actions.edit'), edit_admin_activity_category_path(activity_category) %>
+          <%= link_to t('actions.destroy'), [:admin, activity_category], method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "#{t('actions.new')}#{ActivityCategory.model_name.human}", new_admin_activity_category_path, class: 'btn btn-default' %>

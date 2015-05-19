@@ -1,0 +1,18 @@
+<%= simple_form_for([:admin, @manager], wrapper: :bootstrap3) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%#= f.input :password_digest %>
+    <%= f.input :password %>
+    <%= f.input :password_confirmation %>
+
+    <%= f.input :supper %>
+    <%= f.input :disabled %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

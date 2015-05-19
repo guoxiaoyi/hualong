@@ -1,0 +1,32 @@
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th><%= Activity.human_attribute_name(:title) %></th>
+      <th class="text-center"><%= Activity.human_attribute_name(:start_time) %></th>
+      <th class="text-center"><%= Activity.human_attribute_name(:end_time) %></th>
+      <th class="text-center"><%= Activity.human_attribute_name(:teacher_limit) %></th>
+      <th class="text-center">操作</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activities.each do |activity| %>
+
+      <tr>
+        <td><%= activity.title %></td>
+        <td class="text-center"><%= activity.start_time.strftime("%F %T") %></td>
+        <td class="text-center"><%= activity.end_time.strftime("%F %T") %></td>
+        <td class="text-center"><%= activity.teacher_limit %></td>
+        <td class="text-center">
+          <%= link_to t('actions.show'), [:admin, activity] %>
+          <%= link_to t('actions.edit'), edit_admin_activity_path(activity) %>
+          <%= link_to t('actions.destroy'), [:admin, activity], method: :delete, data: { confirm: '你确定?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "#{t('actions.new')}#{Activity.model_name.human}", new_admin_activity_path, class: 'btn btn-default' %>

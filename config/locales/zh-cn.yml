@@ -1,0 +1,26 @@
+zh-cn:
+  activerecord:
+    models:
+      topic: 帖子
+      reply: 回复
+      manager: 管理员
+      node: 版块
+      activity_category: 活动分类
+      activity: 活动
+      teacher_activity: 报名情况
+    attributes:
+      topic:
+        content: "内容"
+      reply:
+        content: "内容"
+      teacher_activity:
+        college: "学院"
+        contact: "电话"
+      manager:
+        name: "名称"
+        email: "邮箱"
+        supper: "超级管理员"
+        disabled: "状态"
+
+  buttons:
+    sign_in: "登录"

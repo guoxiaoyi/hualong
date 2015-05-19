@@ -1,0 +1,47 @@
+body,ul li,ul,a,img,h1,h2,h3,h4,h5,h6,input,table{padding:0px;margin:0px;font:14px MicrosoftYahei;}
+a{text-decoration: none;}
+ul li{
+  list-style: none;
+}
+$yellow : #eb9327;
+ $white : #FFFFFF;
+  $blue : #2f4e63;
+  $gray : #484848;
+ $width : 1024px;
+.min_width{
+  width:100%;
+  min-width: $width;
+}
+.clr{
+  clear:both;
+}
+.container{
+  width:$width;
+  margin:0 auto;
+}
+div.nav{
+  @extend .min_width;
+  width:100%;
+  min-width: $width;
+  background:#2f4e62;
+  overflow: hidden;
+  li{
+    float:left;
+    a{
+      color: $white;
+      padding: 0px 30px;
+      font-size: 16px;
+      display: inline-block;
+      line-height:60px;
+      &:hover{
+        background:$yellow
+      }
+    }
+  }
+  .on{
+    background:$yellow
+  }
+}
+.banner{
+  @extend .min_width;
+}

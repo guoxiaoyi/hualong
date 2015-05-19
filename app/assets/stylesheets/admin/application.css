@@ -1,0 +1,13 @@
+/*
+ *= require_self
+ *= require_tree .
+ *1= require jquery.treeview
+ *= require wizcms_article/admin/application
+ *= require admin/jquery.datetimepicker
+ */
+
+
+
+.jq_tree {
+  font-size: 12px;
+}

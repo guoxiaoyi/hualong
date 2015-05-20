@@ -8,6 +8,7 @@ em{
 }
 img{
   border:none;
+  vertical-align: middle;
 }
 $yellow : #eb9327;
  $white : #FFFFFF;
@@ -256,5 +257,24 @@ $yellow : #eb9327;
   }
   li:last-child{
     margin-right: 0px;
+  }
+}
+.list{
+  width:70%;
+  margin-top: 20px;
+}
+.list .tit{
+  border-bottom: 3px solid #e0e0e0;
+  height: 27px;
+  line-height: 15px;
+  font-size: 16px;
+  color: #436993;
+  margin-bottom: 24px;
+  span{
+    display: block;
+    background: asset-url("c_h2bg.png") no-repeat;
+    height: 30px;
+    padding-left: 20px;
+    font-family: \5fae\8f6f\96c5\9ed1;
   }
 }

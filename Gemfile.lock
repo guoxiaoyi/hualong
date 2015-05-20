@@ -1,6 +1,6 @@
 GIT
   remote: git@git.wityun.com:wizcloud/wizcms_article.git
-  revision: 9268e710a44b6f353927de2bb51429e53b405c7f
+  revision: 6741c792231c94064408bc24f4c4e085e9ebf323
   specs:
     wizcms_article (0.0.10)
       kaminari
@@ -133,7 +133,7 @@ GEM
     hike (1.2.3)
     hitimes (1.2.2)
     http_parser.rb (0.6.0)
-    httparty (0.13.4)
+    httparty (0.13.5)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
@@ -219,7 +219,6 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     rdoc (4.2.0)
-      json (~> 1.4)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -229,9 +228,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    seed-fu (2.3.4)
-      activerecord (>= 3.1, <= 4.2)
-      activesupport (>= 3.1, <= 4.2)
+    seed-fu (2.3.5)
+      activerecord (>= 3.1, < 4.3)
+      activesupport (>= 3.1, < 4.3)
     shellany (0.0.1)
     simple_form (3.1.0)
       actionpack (~> 4.0)

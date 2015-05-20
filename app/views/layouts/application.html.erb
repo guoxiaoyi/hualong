@@ -6,9 +6,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
+<!--[if lt IE 9]>
+  <%= javascript_include_tag "IEhack" %>
+<![endif]-->
 </head>
-<body>
+<!--[if lt IE 7]><body class="ie ie6 lte9 lte8 lte7"><![endif]-->
+<!--[if IE 7]><body class="ie ie7 lte9 lte8 lte7"><![endif]-->
+<!--[if IE 8]><body class="ie ie8 lte9 lte8"><![endif]-->
+<!--[if IE 9]><body class="ie ie9 lte9"><![endif]-->
+<!--[if !IE]><!--><body><!--<![endif]-->
 <%= render "layouts/header" %>
 <%= yield %>
 

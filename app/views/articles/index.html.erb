@@ -1,24 +1,19 @@
-<div class="container">
+<div class="container public">
+  <div class="page-right pull-right">
+    <%= render "layouts/right"%>
+  </div>
 <div class="list">
   <div class="tit"><span>时局洞察</span></div>
   <%if !@articles.blank?%>
       <ul>
         <% @articles.each do |article|%>
-          <div class="article-list">
-              <div class="article" style="margin-left: 0px;">
-                  <h3><a target="_blank" href="#">外交部：中国渔船证书所载吨位获得了入渔国认可</a></h3>
-                  <p>
-                    中国日报北京5月20日电（记者赵盛楠迟珺）5月20日，外交部发言人洪磊就绿色和平组织称部分中国远洋渔...
-                    <a target="_blank" href="#">阅读全文&gt;&gt;</a>
-                  </p>
-              </div>
-          </div>
-
           <li>
-            <%= link_to article_path(article) do %>
-              <span class="pull-right"><%= article.published_at %></span>
-              <%= article.title%>
-            <% end -%>
+            <h3><%= link_to article.title, article_path(article)  %> </h3>
+            <p>
+              中国日报北京5月20日电（记者赵盛楠迟珺）5月20日，外交部发言人洪磊就绿色和平组织称部分中国远洋渔...
+              <%= link_to "阅读全文&gt;&gt;&nbsp;".html_safe, article_path(article)%>
+            </p>
+            <div class="time"> 发表于 <%= article.published_at.to_s(:default) if article.published_at-%></div>
           </li>
         <% end -%>
       </ul>
@@ -28,4 +23,5 @@
     </div>
   <%end%>
 </div>
+<div class="clr"></div>
 </div>

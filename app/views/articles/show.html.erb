@@ -1,4 +1,13 @@
-<div class="container">
-<%= @article.title%>
-<%= raw @article.content%>
+<div class="container public">
+  <div class="page-right pull-right">
+    <%= render "layouts/right"%>
+  </div>
+  <div class="content_box">
+    <h1 class="content_tit"><%= @article.title%></h1>
+    <div class="time"><%= @article.published_at.to_s(:default) if @article.published_at%></div>
+    <div class="text">
+      <%= raw @article.content%>
+    </div>
+  </div>
+  <div class="clr"></div>
 </div>

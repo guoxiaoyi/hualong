@@ -22,7 +22,7 @@ server 'wityun.com', user: 'examdeploy', roles: %w{web app}, my_property: :my_va
 # set it globally
 set :ssh_options, {
   port: 23,
-  forward_agent: true
+  forward_agent: true,
 }
 # and/or per server
 # server 'example.com',

@@ -42,6 +42,7 @@ gem "omniauth"
 gem 'omniauth-identity'
 gem 'kaminari'
 gem 'seed-fu', '~> 2.3'
+gem 'puma', '~> 2.9.0'
 group :development do
   gem 'capistrano', '~> 3.1.0'
   gem 'capistrano-rails'

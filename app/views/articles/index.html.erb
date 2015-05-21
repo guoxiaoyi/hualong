@@ -3,7 +3,7 @@
     <%= render "layouts/right"%>
   </div>
 <div class="list">
-  <div class="tit"><span>时局洞察</span></div>
+  <%= render "layouts/location"%>
   <%if !@articles.blank?%>
       <ul>
         <% @articles.each do |article|%>

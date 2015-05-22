@@ -1,6 +1,6 @@
 GIT
   remote: git@git.wityun.com:wizcloud/wizcms_article.git
-  revision: 6741c792231c94064408bc24f4c4e085e9ebf323
+  revision: fd1e3d90d3eb22be78c02117380f577950619582
   specs:
     wizcms_article (0.0.10)
       kaminari

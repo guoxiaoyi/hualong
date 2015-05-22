@@ -70,6 +70,7 @@ gem 'bootstrap-sass', '~> 3.1.1'
 gem 'simple_form'
 
 gem 'wizcms_article', '~> 0.0.10' ,  :git => 'git@git.wityun.com:wizcloud/wizcms_article.git'
+# gem 'wizcms_article', '~> 0.0.10' ,  path: "/Users/abc/Documents/wizcms_article"
 
 gem 'wizcms_link', git: "git@git.wityun.com:wizcloud/wizcms_link.git" #, path: "/Users/backer/workspace/wisdom cloud co./projects/wizcms_link"
 

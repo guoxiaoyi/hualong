@@ -398,3 +398,17 @@ $yellow : #eb9327;
     border-color: #337ab7;
   }
 }
+.article_text{
+  border-bottom: 1px solid #DCDCDC;
+  padding-bottom: 30px;
+}
+.article_up_down{
+  line-height: 30px;
+  a{
+    margin-left: 20px;
+    color:#999;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

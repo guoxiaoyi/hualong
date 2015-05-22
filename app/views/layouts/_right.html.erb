@@ -27,7 +27,7 @@
     <%= link_to "<span>学术委员会</span>".html_safe, page_path(:learning) %>
   </div>
   <div class="index_right_text">
-    <%= @learning.content%>
+    <%= strip_tags(@learning)%>
   </div>
   <%= image_tag "20140629.jpg", width: "100%" ,class: "clr"%>
   <br>
@@ -36,6 +36,6 @@
     <a href="#"></a>
   </div>
   <div class="index_right_text">
-    <%= @enterprise.content%>
+    <%= strip_tags(@enterprise)%>
   </div>
 </div>

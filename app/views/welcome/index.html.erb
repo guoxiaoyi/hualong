@@ -35,14 +35,14 @@
         <a href="#"><span>学术委员会</span></a>
       </div>
       <div class="index_right_text">
-        <%= @learning.content%>
+        <%= strip_tags(@learning)%>
       </div>
       <br>
       <div class="index_title">
         <a href="#"><span>企业委员会</span></a>
       </div>
       <div class="index_right_text">
-        <%= @enterprise.content%>
+        <%= strip_tags(@enterprise)%>
       </div>
     </div>
   </div>

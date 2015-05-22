@@ -2,13 +2,14 @@ WizcmsArticle::ArticleCategory.seed(:id,
   {id: 1, name: '论坛动态', custom_order: '', parent_id: 0, brief: 'bbs', published: 1, cite_key: 'bbs'},
   {id: 2, name: '研究成果', custom_order: '', parent_id: 0, brief: 'study', published: 1, cite_key: 'study'},
   {id: 3, name: '媒体动态', custom_order: '', parent_id: 0, brief: 'news', published: 1, cite_key: 'news'},
-  {id: 4, name: '高端视点', custom_order: '', parent_id: 0, brief: 'see', published: 1, cite_key: 'see'}
+  {id: 4, name: '高端视点', custom_order: '', parent_id: 0, brief: 'see', published: 1, cite_key: 'see'},
+  {id: 5, name: '工作动态', custom_order: '', parent_id: 0, brief: 'work', published: 1, cite_key: 'work'}
 )
 WizcmsArticle::Page.seed(:id,
-  {id: 1, title: '组织机构', content: '组织机构组织机构', published: 1, cite_key: 'organ', keywords: 'organ', brief: '', parent_id: ''},
-  {id: 2, title: '学术委员会', content: '联系我们联系我们', published: 1, cite_key: 'learning', keywords: 'learning', brief: '', parent_id: ''},
-  {id: 3, title: '企业委员会', content: '联系我们联系我们', published: 1, cite_key: 'enterprise', keywords: 'enterprise', brief: '', parent_id: ''},
-  {id: 4, title: '联系我们', content: '联系我们联系我们', published: 1, cite_key: 'contact_us', keywords: 'contact_us', brief: '', parent_id: ''}
+  {id: 1, title: '组织机构', content: '组织机构组织机构', published: 1, cite_key: 'organ', keywords: '', brief: 'organ', parent_id: ''},
+  {id: 2, title: '学术委员会', content: '联系我们联系我们', published: 1, cite_key: 'learning', keywords: '', brief: 'learning', parent_id: ''},
+  {id: 3, title: '企业委员会', content: '联系我们联系我们', published: 1, cite_key: 'enterprise', keywords: '', brief: 'enterprise', parent_id: ''},
+  {id: 4, title: '联系我们', content: '联系我们联系我们', published: 1, cite_key: 'contact_us', keywords: '', brief: 'contact_us', parent_id: ''}
 )
 WizcmsArticle::Article.seed(:id,
   {id: 1, title: '韩总统府拟26日向国会提交新总理提名人任命案', author: '管理员', published: 1, brief: '【环球网综合报道】据韩联社5月22日报道，韩国总统府青瓦台发言人闵庚旭22日表示，青瓦台计划26日向', content: "<p>　　【环球网综合报道】据韩联社5月22日报道，韩国总统府青瓦台发言人闵庚旭22日表示，青瓦台计划26日向国会提交新任国务总理提名人黄教安的任命案和人事听证提请。</p>
@@ -36,5 +37,11 @@ WizcmsArticle::Article.seed(:id,
   {id: 21, title: '生成文章数据-分类4-标题3', author: '管理员', published: 1, brief: '文章的简介文章的简介文章的简介文章的简介文章的简介', content: "生成文章数据内容生成文章数据内容生成文章数据内容生成文章数据内容", article_category_id: '4', published_at: Time.now},
   {id: 22, title: '生成文章数据-分类4-标题4', author: '管理员', published: 1, brief: '文章的简介文章的简介文章的简介文章的简介文章的简介', content: "生成文章数据内容生成文章数据内容生成文章数据内容生成文章数据内容", article_category_id: '4', published_at: Time.now},
   {id: 23, title: '生成文章数据-分类4-标题5', author: '管理员', published: 1, brief: '文章的简介文章的简介文章的简介文章的简介文章的简介', content: "生成文章数据内容生成文章数据内容生成文章数据内容生成文章数据内容", article_category_id: '4', published_at: Time.now},
-  {id: 24, title: '生成文章数据-分类4-标题6', author: '管理员', published: 1, brief: '文章的简介文章的简介文章的简介文章的简介文章的简介', content: "生成文章数据内容生成文章数据内容生成文章数据内容生成文章数据内容", article_category_id: '4', published_at: Time.now}
+  {id: 24, title: '生成文章数据-分类5-标题6', author: '管理员', published: 1, brief: '文章的简介文章的简介文章的简介文章的简介文章的简介', content: "生成文章数据内容生成文章数据内容生成文章数据内容生成文章数据内容", article_category_id: '5', published_at: Time.now},
+  {id: 25, title: '生成文章数据-分类5-标题1', author: '管理员', published: 1, brief: '文章的简介文章的简介文章的简介文章的简介文章的简介', content: "生成文章数据内容生成文章数据内容生成文章数据内容生成文章数据内容", article_category_id: '5', published_at: Time.now},
+  {id: 26, title: '生成文章数据-分类5-标题2', author: '管理员', published: 1, brief: '文章的简介文章的简介文章的简介文章的简介文章的简介', content: "生成文章数据内容生成文章数据内容生成文章数据内容生成文章数据内容", article_category_id: '5', published_at: Time.now},
+  {id: 27, title: '生成文章数据-分类5-标题3', author: '管理员', published: 1, brief: '文章的简介文章的简介文章的简介文章的简介文章的简介', content: "生成文章数据内容生成文章数据内容生成文章数据内容生成文章数据内容", article_category_id: '5', published_at: Time.now},
+  {id: 28, title: '生成文章数据-分类5-标题4', author: '管理员', published: 1, brief: '文章的简介文章的简介文章的简介文章的简介文章的简介', content: "生成文章数据内容生成文章数据内容生成文章数据内容生成文章数据内容", article_category_id: '5', published_at: Time.now},
+  {id: 29, title: '生成文章数据-分类5-标题5', author: '管理员', published: 1, brief: '文章的简介文章的简介文章的简介文章的简介文章的简介', content: "生成文章数据内容生成文章数据内容生成文章数据内容生成文章数据内容", article_category_id: '5', published_at: Time.now},
+  {id: 30, title: '生成文章数据-分类5-标题6', author: '管理员', published: 1, brief: '文章的简介文章的简介文章的简介文章的简介文章的简介', content: "生成文章数据内容生成文章数据内容生成文章数据内容生成文章数据内容", article_category_id: '5', published_at: Time.now}
 )

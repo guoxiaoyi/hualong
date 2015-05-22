@@ -35,14 +35,14 @@
         <a href="#"><span>学术委员会</span></a>
       </div>
       <div class="index_right_text">
-        2000多年前，亚欧大陆上勤劳勇敢的人民，探索出多条连接亚欧非几大文明的贸易和人文交流通路，后人将其统称为“丝绸之路”。千百年来，“和平合作、开放包容、互学互鉴、互利共赢”的丝绸之路精神薪火相传，推进了人类文明进步，是促进沿线各国繁荣发展的重要纽带，
+        <%= @learning.content%>
       </div>
       <br>
       <div class="index_title">
         <a href="#"><span>企业委员会</span></a>
       </div>
       <div class="index_right_text">
-        2000多年前，亚欧大陆上勤劳勇敢的人民，探索出多条连接亚欧非几大文明的贸易和人文交流通路，后人将其统称为“丝绸之路”。千百年来，“和平合作、开放包容、互学互鉴、互利共赢”的丝绸之路精神薪火相传，推进了人类文明进步，是促进沿线各国繁荣发展的重要纽带，
+        <%= @enterprise.content%>
       </div>
     </div>
   </div>
@@ -54,15 +54,7 @@
     </div>
     <div class="col-lg-6">
       <div class="panel">
-        <h4><span>论坛动态</span> <a href="">更多</a></h4>
-        <ul>
-          <li><a href="#"><span class="pull-right">2015-05-20</span>徐光裕：把神风特攻与黄继光相比的人</a></li>
-          <li><a href="#"><span class="pull-right">2015-05-20</span>徐光裕：把神风特攻与黄继光相比的人</a></li>
-          <li><a href="#"><span class="pull-right">2015-05-20</span>徐光裕：把神风特攻与黄继光相比的人</a></li>
-          <li><a href="#"><span class="pull-right">2015-05-20</span>徐光裕：把神风特攻与黄继光相比的人</a></li>
-          <li><a href="#"><span class="pull-right">2015-05-20</span>徐光裕：把神风特攻与黄继光相比的人</a></li>
-          <li><a href="#"><span class="pull-right">2015-05-20</span>徐光裕：把神风特攻与黄继光相比的人</a></li>
-        </ul>
+       <%= pannel_list(@work) %>
       </div>
     </div>
     <div class="clr"></div>

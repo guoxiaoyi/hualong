@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :get_articles_category
+  before_action :right_page
   def index
     if @article_category
       @articles = @article_category.articles.order("published_at desc").page( params[:page] )

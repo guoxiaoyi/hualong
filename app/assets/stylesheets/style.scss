@@ -22,6 +22,7 @@ $yellow : #eb9327;
 }
 .clr{
   clear:both;
+  display: block;
 }
 .text-center{
   text-align: center;
@@ -266,7 +267,6 @@ $yellow : #eb9327;
 }
 .list{
   width:68%;
-  margin-top: 20px;
   padding-right:2%;
   .news_list li{
     padding: 0 0 20px 0;
@@ -389,7 +389,6 @@ $yellow : #eb9327;
   li:last-child a, li.last-child a{
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-    line-height:19px;
   }
   li.active a{
     z-index: 2;

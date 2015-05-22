@@ -10,7 +10,7 @@
           <li>
             <h3><%= link_to article.title, article_path(article)  %> </h3>
             <p>
-              中国日报北京5月20日电（记者赵盛楠迟珺）5月20日，外交部发言人洪磊就绿色和平组织称部分中国远洋渔...
+              <%= article.brief%>
               <%= link_to "阅读全文&gt;&gt;&nbsp;".html_safe, article_path(article)%>
             </p>
             <div class="time"> 发表于 <%= article.published_at.to_s(:default) if article.published_at-%></div>

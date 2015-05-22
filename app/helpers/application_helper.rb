@@ -14,4 +14,18 @@ module ApplicationHelper
     end
     return text
   end
+
+  def flash_message
+    html = ""
+    if flash[:notice]
+      html << %{<div class="notice bg-success">#{flash[:notice]}</div>}
+    end
+    if flash[:alert]
+      html << %{<div class="notice bg-warning">#{flash[:alert]}</div>}
+    end
+    if flash[:error]
+      html << %{<div class="notice bg-danger">#{flash[:error]}</div>}
+    end
+    return sanitize(html)
+  end
 end

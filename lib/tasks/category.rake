@@ -4,4 +4,5 @@ task :build => :environment do
   Rake::Task["db:create"].invoke
   Rake::Task["db:migrate"].invoke
   Rake::Task["db:seed_fu"].invoke
+  Rake::Task["admin:init_manager"].invoke
 end

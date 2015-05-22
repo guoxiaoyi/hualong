@@ -27,15 +27,14 @@
     <%= link_to "<span>学术委员会</span>".html_safe, page_path(:learning) %>
   </div>
   <div class="index_right_text">
-    <%= strip_tags(@learning)%>
+    <%= strip_tags(@learning).truncate(200)%>
   </div>
   <%= image_tag "20140629.jpg", width: "100%" ,class: "clr"%>
   <br>
   <div class="index_title">
     <%= link_to "<span>企业委员会</span>".html_safe, page_path(:enterprise) %>
-    <a href="#"></a>
   </div>
   <div class="index_right_text">
-    <%= strip_tags(@enterprise)%>
+    <%= strip_tags(@enterprise).truncate(200)%>
   </div>
 </div>

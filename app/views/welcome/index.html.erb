@@ -20,7 +20,7 @@
           <% if !@see.list.blank? %>
           <% @see.list.limit(5).each do |l|%>
             <li>
-              <%= link_to l.title, article_path(l) %>
+              <%= link_to l.title.truncate(18), article_path(l) %>
             </li>
           <% end -%>
           <% else %>
@@ -32,17 +32,17 @@
       <div class="clr"></div>
       <br>
       <div class="index_title">
-        <a href="#"><span>学术委员会</span></a>
+        <%= link_to "<span>学术委员会</span>".html_safe, page_path(:learning) %>
       </div>
       <div class="index_right_text">
-        <%= strip_tags(@learning)%>
+        <%= strip_tags(@learning).truncate(200)%>
       </div>
       <br>
       <div class="index_title">
-        <a href="#"><span>企业委员会</span></a>
+        <%= link_to "<span>企业委员会</span>".html_safe, page_path(:enterprise) %>
       </div>
       <div class="index_right_text">
-        <%= strip_tags(@enterprise)%>
+        <%= strip_tags(@enterprise).truncate(200)%>
       </div>
     </div>
   </div>

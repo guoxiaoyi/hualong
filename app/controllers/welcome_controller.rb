@@ -4,5 +4,6 @@ class WelcomeController < ApplicationController
     @bbs = PannelList.new(:bbs, news_hash)
     @study = PannelList.new(:study, news_hash)
     @news = PannelList.new(:news, news_hash)
+    @see = PannelList.new(:see, news_hash)
   end
 end

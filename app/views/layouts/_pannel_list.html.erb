@@ -7,7 +7,7 @@
     <li>
       <%= link_to article_path(news) do %>
       <span class="pull-right"><%= news.published_at.to_s(:date) if news.published_at %></span>
-      <%= news.title%>
+      <%= truncate_u(news.title)%>
       <% end -%>
    </li>
   <% end -%>

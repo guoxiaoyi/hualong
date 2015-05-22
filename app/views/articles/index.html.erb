@@ -5,7 +5,7 @@
 <div class="list">
   <%= render "layouts/location"%>
   <%if !@articles.blank?%>
-      <ul>
+      <ul class="news_list">
         <% @articles.each do |article|%>
           <li>
             <h3><%= link_to article.title, article_path(article)  %> </h3>
@@ -22,6 +22,7 @@
       还没有内容
     </div>
   <%end%>
+  <%= paginate @articles %>
 </div>
 <div class="clr"></div>
 </div>

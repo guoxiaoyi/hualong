@@ -3,7 +3,7 @@ module ApplicationHelper
     render partial: 'layouts/pannel_list', locals:{ pannel_list: pannel_obj}
   end
 
-  def truncate_u(text, length = 30, truncate_string = "...")
+  def truncate_u(text, length = 20, truncate_string = "...")
     l=0
     char_array=text.unpack("U*")
     char_array.each_with_index do |c,i|

@@ -1,7 +1,7 @@
 # config valid only for Capistrano 3.1
 
 set :application, 'obor100'
-set :repo_url, 'git@git.wityun.com:eweb/obor100.git'
+set :repo_url, 'git@github.com:guoxiaoyi/hualong.git'
 # set :port, 23
 
 # Default branch is :master

@@ -171,7 +171,7 @@ GEM
     minitest (5.10.1)
     multi_json (1.12.1)
     multi_xml (0.6.0)
-    mysql2 (0.4.5)
+    mysql2 (0.3.21)
     nenv (0.3.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -293,7 +293,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
-  mysql2
+  mysql2 (~> 0.3.13)
   omniauth
   omniauth-identity
   pry-nav

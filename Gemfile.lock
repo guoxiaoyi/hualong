@@ -285,6 +285,7 @@ DEPENDENCIES
   capistrano-bundler
   capistrano-rails
   capistrano3-puma
+  carrierwave
   coffee-rails (~> 4.0.0)
   gitlab
   guard-livereload

@@ -1,12 +1,30 @@
 <div class="nav">
-  <ul class="container">
-    <li class="<%= "on" if "#{controller_name}/#{action_name}" == "welcome/index" %>"><%= link_to "首页", root_path %></li>
-    <li class="<%= "on" if request.fullpath =~ /organ/ %>"><%= link_to "组织机构", page_path(:organ) %></li>
-    <li class="<%= "on" if request.fullpath =~ /bbs/ %>"><%= link_to "论坛动态", article_category_articles_path(:bbs) %></li>
-    <li class="<%= "on" if request.fullpath =~ /study/ %>"><%= link_to "研究成果", article_category_articles_path(:study) %></li>
-    <li class="<%= "on" if request.fullpath =~ /news/ %>"><%= link_to "媒体动态", article_category_articles_path(:news) %></li>
-    <li class="<%= "on" if request.fullpath =~ /learning/ %>"><%= link_to "学术委员会", page_path(:learning) %></li>
-    <li class="<%= "on" if request.fullpath =~ /enterprise/ %>"><%= link_to "企业委员会", page_path(:enterprise) %></li>
-    <li class="<%= "on" if request.fullpath =~ /contact_us/ %>"><%= link_to "联系我们", page_path(:contact_us) %></li>
+  <%= image_tag "header_logo.jpg", class: "header_logo"%>
+  <ul class="nav-right">
+    <li class="<%= "on" if "#{controller_name}/#{action_name}" == "welcome/index" %>"><%= link_to "HOME ", root_path %></li>
+    <li class="<%= "on" if request.fullpath =~ /organ/ %>"><%= link_to "ABOUT US", page_path(:organ) %></li>
+    <li class="<%= "on" if request.fullpath =~ /bbs/ %>"><%= link_to "OEM&OPM", article_category_articles_path(:bbs) %></li>
+    <li class="<%= "on" if request.fullpath =~ /study/ %>"><%= link_to "QUALTTY", article_category_articles_path(:study) %></li>
+    <li class="<%= "on" if request.fullpath =~ /contact_us/ %>"><%= link_to "CONTACT US", page_path(:contact_us) %></li>
+  </ul>
+  <ul class="nav-left">
+    <li><a href="#">SKATE BOARD</a></li>
+    <li><a href="#">BASEBALL BAT</a></li>
   </ul>
 </div>
+<div class="fullSlide">
+  <div class="bd">
+    <ul>
+      <li style="background:url(<%= asset_path "banner_1.jpg"%>) center top"></li>
+      <li style="background:url(<%= asset_path "banner_1.jpg"%>) center top"></li>
+    </ul>
+  </div>
+  <div class="hd">
+    <ul></ul>
+  </div>
+</div>
+<% content_for :script do%>
+<script type="text/javascript">
+  jQuery(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",  autoPlay:true, autoPage:true, trigger:"click" });
+</script>
+<% end -%>

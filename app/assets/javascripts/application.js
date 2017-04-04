@@ -12,4 +12,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-
+//= require jquery.SuperSlide.2.1.1.js

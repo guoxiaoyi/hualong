@@ -32,7 +32,7 @@ gem 'spring',        group: :development
 # Use unicorn as the app server
 # gem 'unicorn'
 
-gem 'carrierwave'
+gem 'carrierwave', '~> 0.11.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

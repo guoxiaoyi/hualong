@@ -11,6 +11,8 @@ img{
   border:none;
   vertical-align: middle;
 }
+.pull-right{float:right;}
+.pull-left{float:left;}
 @mixin clear{
   &:after{
     content:"";
@@ -37,18 +39,36 @@ div.nav{
   a{
     color:#000b19;
   }
+
+  .navBar{position:relative; z-index:1;   color:#fff; height:40px; line-height:40px;   }
+  // .navBar h3{ font-size:100%; font-weight:normal; font-size:14px;  }
+  .navBar .m{  position:relative; float:left;  margin:0 10px;text-align:center;   }
+  .navBar .on h3 a{padding:11px 0;  border-bottom:2px solid #c00;   }
+  .navBar .on h3 a i{ filter:alpha(opacity=100);opacity:1;  }
+  .navBar .sub{ display:none; /*默认隐藏*/ width:108px; padding:10px 0;  position:absolute; left:-10px; top:40px;  background:#eee;  float:left; line-height:30px;
+  }
+  .navBar .sub li{ text-align:center;  }
+  .navBar .sub li a{ color:#333; display:block; zoom:1;}
+  .navBar .sub li a:hover{  background:#ddd; color:#c00;   }
+  .navBar .sub dl{ display:inline-block; *display:inline; zoom:1; vertical-align:top; padding:15px 29px; line-height:26px;  }
+  .navBar .sub dl a:hover{ color:#c00;  }
+  .navBar .sub dl dt a{ color:#000;  }
+  .navBar .sub dl dd a{ color:#999; padding-left:7px; background:url(images/icon.png) 0 -332px no-repeat;  }
+
+  .navBar #m2 .sub{ z-index:1; width:980px; left:-116px;  }
   ul.nav-left{
     float: left;
-    li{
-      line-height:98px;
-      display: inline;
-      font-size:24px;
-      margin-left:40px;
-    }
+    // li{
+    //   line-height:98px;
+    //   display: inline;
+    //   font-size:24px;
+    //   margin-left:40px;
+    // }
   }
   ul.nav-right{
     float:right;
     li{
+      font-family: Arial;
       line-height: 98px;
       font-size: 18px;
       margin-left:34px;
@@ -141,11 +161,14 @@ div.product-list{
   font-size: 16px;
 }
 .footer{
+  @include clear;
+  color:#FFF;
   width:100%;
   min-width:1200px;
   background:#000b19;
   padding:60px 0px;
   margin-top: 80px;
+  font-family: arial;
   table{
     width:100%;
     padding-bottom: 50px;
@@ -220,5 +243,33 @@ div.product-list{
       margin-top: 36px;
       margin-right:10px;
     }
+  }
+  dl{
+    float:left;
+    margin-right: 95px;
+    margin-top: 25px;
+    dt{
+      padding-bottom: 40px;
+      font-size: 24px;
+    }
+    dd{
+      font-size: 16px;
+      margin:0px;
+      a{
+        color:#FFF;
+        line-height: 20px;
+      }
+    }
+  }
+}
+div.address{
+  margin-top: 25px;
+  img{
+    margin-bottom: 20px;
+  }
+  div{
+    font-size: 18px;
+    line-height: 30px;
+    padding-left:64px;
   }
 }

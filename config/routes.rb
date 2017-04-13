@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :products
+  end
+
   get 'welcome/index'
 
   resources :article_categories, only: [:index, :show],path: 'a' do

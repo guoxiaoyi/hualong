@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   end
   resources :articles, only: [:index, :show]
   resources :pages, only: [:show], path: 'p'
+  resources :products, only: [:index,:show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

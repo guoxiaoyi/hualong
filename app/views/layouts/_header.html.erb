@@ -3,7 +3,7 @@
   <ul class="nav-right">
     <li class="<%= "on" if "#{controller_name}/#{action_name}" == "welcome/index" %>"><%= link_to "HOME ", root_path %></li>
     <li class="<%= "on" if request.fullpath =~ /organ/ %>"><%= link_to "ABOUT US", page_path(:organ) %></li>
-    <li class="<%= "on" if request.fullpath =~ /bbs/ %>"><%= link_to "OEM&OPM", article_category_articles_path(:bbs) %></li>
+    <li class="<%= "on" if "#{controller_name}/#{action_name}" == "products/index" %>"><%= link_to "OEM&OPM", products_path %></li>
     <li class="<%= "on" if request.fullpath =~ /study/ %>"><%= link_to "QUALTTY", article_category_articles_path(:study) %></li>
     <li class="<%= "on" if request.fullpath =~ /contact_us/ %>"><%= link_to "CONTACT US", page_path(:contact_us) %></li>
   </ul>
@@ -71,6 +71,7 @@
   </ul>
 </div>
 <div class="sub-nav"></div>
+<% if @banner %>
 <div class="fullSlide">
   <div class="bd">
     <ul>
@@ -82,6 +83,9 @@
     <ul></ul>
   </div>
 </div>
+<% else %>
+<div class="banner-line"></div>
+<% end -%>
 <% content_for :script do%>
 <script type="text/javascript">
   jQuery(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",  autoPlay:true, autoPage:true, trigger:"click" });

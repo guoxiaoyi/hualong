@@ -19,6 +19,10 @@ admin_menu:
     submenu:
       - model: file
         engine: wizcms_article
+  - model: product
+    submenu:
+      - model: product
+      - model: product_category
   - model: link
     engine: wizcms_link
     submenu:

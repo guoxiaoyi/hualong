@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150505084835) do
+ActiveRecord::Schema.define(version: 20170423105548) do
 
   create_table "kindeditor_assets", force: true do |t|
     t.string   "asset"
@@ -31,6 +31,24 @@ ActiveRecord::Schema.define(version: 20150505084835) do
     t.boolean  "disabled",                    default: false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "product_categories", force: true do |t|
+    t.string   "name",       limit: 100
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "language"
+  end
+
+  create_table "products", force: true do |t|
+    t.string   "name",                limit: 100
+    t.text     "summary"
+    t.string   "video"
+    t.integer  "product_category_id"
+    t.text     "inquiry"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "brief"
   end
 
   create_table "wizcms_article_article_categories", force: true do |t|

@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= ProductCategory.human_attribute_name(:name) %>:</strong>
+  <%= @product_category.name %>
+</p>
+
+<%= link_to t('buttons.edit'), edit_admin_product_category_path(@product_category) %> |
+<%= link_to t('buttons.back'), admin_product_categories_path %>

@@ -1,4 +1,22 @@
 <p id="notice"><%= notice %></p>
+<table class="table table-bordered">
+  <tr>
+    <td>Name</td>
+    <td><%= @product.name%></td>
+  </tr>
+  <tr>
+    <td>ProductCategory</td>
+    <td><%= @product.product_category_id%></td>
+  </tr>
+  <tr>
+    <td>Summary</td>
+    <td><%= @product.summary%></td>
+  </tr>
+  <tr>
+    <td>Video url</td>
+    <td><%= @product.video%></td>
+  </tr>
+</table>
 
 <%= link_to t('buttons.edit'), edit_admin_product_path(@product) %> |
 <%= link_to t('buttons.back'), admin_products_path %>

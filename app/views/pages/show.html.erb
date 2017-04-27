@@ -1,13 +1,8 @@
 <div class="container public">
-  <div class="page-right pull-right">
-    <%= render "layouts/right"%>
+  <div class="about-nav text-right">
+    <%= link_to "Profile", "#", class: "on"%>
+    <%= link_to "Profile", "#"%>
+    <%= link_to "Profile", "#"%>
+    <%= link_to "Profile", "#"%>
   </div>
-  <div class="content_box">
-    <h1 class="content_tit"><%= @page.title%></h1>
-    <div class="time"><%= @page.updated_at.to_s(:default) if @page.updated_at%></div>
-    <div class="text">
-      <%= raw @page.content%>
-    </div>
-  </div>
-  <div class="clr"></div>
 </div>

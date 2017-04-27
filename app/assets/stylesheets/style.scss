@@ -392,3 +392,22 @@ img.product-list-banner{
     }
   }
 }
+div.public.container{
+  @include clear;
+}
+div.about-nav{
+  float: right;
+  border-bottom:1px solid #000b1a;
+  display: inline-block;
+  a{
+    display: inline-block;
+    padding:10px 20px;
+    font-size: 16px;
+    color:#000b1a;
+    font-family: arial;
+    &.on{
+      background:#000b1a;
+      color:#FFF;
+    }
+  }
+}

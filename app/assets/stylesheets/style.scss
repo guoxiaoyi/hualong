@@ -29,7 +29,7 @@ div.container{
 .clr{clear:both;}
 div.nav{
   width:85%;
-  min-width:1200px;
+  max-width:1280px;
   margin:0 auto;
   font-family: Arial;
   img.header_logo{
@@ -41,22 +41,25 @@ div.nav{
     color:#000b19;
   }
 
-  .navBar{position:relative; z-index:1;   color:#fff; height:40px; line-height:40px;margin-top:30px;}
+  .navBar{position:relative; z-index:1;   color:#fff; height:98px; line-height:98px;}
   // .navBar h3{ font-size:100%; font-weight:normal; font-size:14px;  }
   .navBar .m{  position:relative; float:left;  margin:0 10px;text-align:center;   }
+  // .navBar h3{height:98px;}
   .navBar h3 a{font-size:24px;font-weight:normal;}
   .navBar .on h3 a{   }
   .navBar .on h3 a i{ filter:alpha(opacity=100);opacity:1;  }
-  .navBar .sub{ display:none;/*默认隐藏*/ width:108px; padding:10px 0;  position:absolute; left:-10px; top:40px; line-height:30px; background:#FFF;}
-  .navBar .sub li{ text-align:center;  }
+  .navBar .sub{ display:none;/*默认隐藏*/ width:1100px; padding:10px 40px;  position:absolute; left:-10px; top:98px; line-height:30px; background:#FFF;text-align:left;}
+  .navBar .sub li{ text-align:left;  }
   .navBar .sub li a{ color:#333; display:block; zoom:1;}
   .navBar .sub li a:hover{  background:#ddd; color:#c00;   }
-  .navBar .sub dl{ display:inline-block; *display:inline; zoom:1; vertical-align:top; padding:15px 29px; line-height:26px;  }
+  .navBar .sub dl{ display:inline-block; *display:inline; zoom:1; vertical-align:top; padding:15px 29px; line-height:26px;}
   .navBar .sub dl a:hover{ color:#c00;  }
   .navBar .sub dl dt a{ color:#000;  }
+  .navBar .sub dl dt {text-align:center;font-weight:bold;font-size:20px;margin-bottom:10px;}
   .navBar .sub dl dd a{ color:#999; padding-left:7px; }
+  .navBar .sub dl dd{margin:0px;padding:0px;}
 
-  .navBar #m2 .sub{ z-index:1; width:980px; left:-189px;  }
+  .navBar #m2 .sub{ z-index:1; left:-192px;  }
   ul.nav-left{
     float: left;
     // li{

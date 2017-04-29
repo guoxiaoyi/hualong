@@ -414,3 +414,20 @@ div.about-nav{
     }
   }
 }
+.left-bar{
+  position: fixed;
+  right:0px;
+  z-index: 9999;
+  top:50%;
+  margin-top:-130px;
+  ul{
+    li{
+      width:58px;
+      height:58px;
+      border:1px solid #9f9f9f;
+      &+li{
+        margin-top: 7px;
+      }
+    }
+  }
+}

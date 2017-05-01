@@ -433,6 +433,17 @@ div.about-nav{
       &.flash_show:hover div.flash{
         animation-name: fadeInRight;
       }
+      &.youtube{
+        &:hover div.video{display:block;}
+        div.video{
+          display: none;
+          width:570px;
+          height:315px;
+          position: absolute;
+          right:58px;
+          bottom:-1px;
+        }
+      }
       &.rfq{
         div.wrap form{
           margin:0px;

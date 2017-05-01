@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170501091456) do
+ActiveRecord::Schema.define(version: 20170501115410) do
 
   create_table "kindeditor_assets", force: true do |t|
     t.string   "asset"
@@ -38,6 +38,11 @@ ActiveRecord::Schema.define(version: 20170501091456) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "language"
+    t.integer  "cid"
+    t.string   "en_title",   limit: 100
+    t.string   "zh_title",   limit: 100
+    t.string   "jp_title",   limit: 100
+    t.string   "ko_title",   limit: 100
   end
 
   create_table "products", force: true do |t|
@@ -49,6 +54,10 @@ ActiveRecord::Schema.define(version: 20170501091456) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "brief"
+    t.string   "en_name",             limit: 100
+    t.string   "jp_name",             limit: 100
+    t.string   "ko_name",             limit: 100
+    t.string   "image_path"
   end
 
   create_table "wizcms_article_article_categories", force: true do |t|

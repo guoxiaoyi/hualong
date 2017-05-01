@@ -2,10 +2,17 @@
   <div class="product-category">
     <h3 class="title">CATEGORY</h3>
     <ul>
-      <li><a href="#"><span></span> BLANK DECKS </a></li>
-      <li><a href="#"><span></span> DECKS </a></li>
-      <li><a href="#"><span></span> COMPLETE </a></li>
-      <li><a href="#"><span></span> ACCESSORIES </a></li>
+      <% @product_categories.where(cid: 0).each do |product_cateogry_a|%>
+        <li>
+          <a href="#"><span></span> <%= product_cateogry_a.en_title%> </a>
+          <% @product_categories.where(cid: product_cateogry_a.id).each do |product_cateogry_b|%>
+            <h5><%= product_cateogry_b.en_title%></h5>
+            <% @product_categories.where(cid: product_cateogry_b.id).each do |product_cateogry_c|%>
+            <h6><%= product_cateogry_c.en_title%></h6>
+            <% end -%>
+          <% end -%>
+        </li>
+      <% end -%>
     </ul>
   </div>
   <div class="oem product-list">

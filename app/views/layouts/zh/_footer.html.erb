@@ -1,0 +1,87 @@
+<div class="footer text-center">
+  <div class="container">
+    <table cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="50%">
+          <h3 class="t">CONTACT  WITH  ME</h3>
+          <form action="#" class="email">
+            <input type="text" placeholder="Your Email">
+            <input type="submit">
+          </form>
+        </td>
+        <td class="society" width="30%">
+          <h3 class="t">FIND US ON </h3>
+          <%=link_to "#", class: "twitter" do%> <%= image_tag "twitter.png"%> <% end -%>
+          <%=link_to "#", class: "facebook" do%> <%= image_tag "facebook.png"%> <% end -%>
+          <%=link_to "#", class: "youtube" do%> <%= image_tag "youtube.png"%> <% end -%>
+          <%=link_to "#", class: "google" do%> <%= image_tag "google.png"%> <% end -%>
+        </td>
+        <td class="country" width="20%">
+          <h3 class="t">LANGUAGE </h3>
+          <%=link_to zh_welcome_index_path do%> <%= image_tag "country.jpg"%> <% end -%>
+          <%=link_to en_welcome_index_path do%> <%= image_tag "en.jpg"%> <% end -%>
+          <%=link_to "#" do%> <%= image_tag "jp.jpg"%> <% end -%>
+          <%=link_to "#" do%> <%= image_tag "country.jpg"%> <% end -%>
+        </td>
+      </tr>
+    </table>
+    <div class="address pull-right">
+      <%= image_tag "footer_logo.png"%>
+      <div>Tel:  86 - 0411- 3964444</div>
+      <div>Email:  hualong@gmail.com</div>
+      <div>Add:  Dalian  </div>
+      <div>Skype: 1242123</div>
+    </div>
+    <dl>
+      <dt>PRODUCT</dt>
+      <dd><a href="#">skate board</a></dd>
+      <dd><a href="#">base ball bat</a></dd>
+    </dl>
+    <dl>
+      <dt>HOME</dt>
+      <dd><a href="#">about us</a></dd>
+      <dd><a href="#">oem & odm</a></dd>
+      <dd><a href="#">qality</a></dd>
+    </dl>
+    <div class="clr"></div>
+  </div>
+</div>
+<div class="left-bar">
+  <ul>
+    <li><a href="#"><%= image_tag "facebook.jpg"%></a></li>
+    <li class="youtube">
+      <a href="#"><%= image_tag "youtube.jpg"%></a>
+      <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/2RyWXVKAUag" frameborder="0" allowfullscreen></iframe> </div>
+    </li>
+    <li class="rfq flash_show">
+      <a href="javascript:void(0)" class="rfq"><%= image_tag "rfq.jpg"%></a>
+      <div class="flash animated"> <nobr>Request for Quotationi </nobr></div>
+      <div class="wrap">
+        <form>
+          <textarea placeholder="I want to purchase:"></textarea>
+          <input type="text" name="" placeholder="Email">
+          <input type="submit" value="submit RFQ">
+        </form>
+      </div>
+    </li>
+    <li><a href="#"><%= image_tag "top.jpg"%></a></li>
+  </ul>
+</div>
+<% content_for :script do %>
+  <script type="text/javascript">
+
+    $(".left-bar li.rfq a.rfq").click(function(event) {
+      a = $(".left-bar li.rfq").children('div.wrap')
+      b = $(".left-bar li.rfq")
+      if (b.hasClass('show')) {
+        b.removeClass('show');
+        b.addClass('flash_show')
+        a.hide();
+      }else{
+        b.addClass('show');
+        b.removeClass('flash_show')
+        a.show();
+      }
+    });
+  </script>
+<% end -%>

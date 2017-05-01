@@ -45,3 +45,36 @@ WizcmsArticle::Article.seed(:id,
   {id: 29, title: '生成文章数据-分类5-标题5', author: '管理员', published: 1, brief: '文章的简介文章的简介文章的简介文章的简介文章的简介', content: "生成文章数据内容生成文章数据内容生成文章数据内容生成文章数据内容", article_category_id: '5', published_at: Time.now},
   {id: 30, title: '生成文章数据-分类5-标题6', author: '管理员', published: 1, brief: '文章的简介文章的简介文章的简介文章的简介文章的简介', content: "生成文章数据内容生成文章数据内容生成文章数据内容生成文章数据内容", article_category_id: '5', published_at: Time.now}
 )
+ProductCategory.seed(:id,
+  {id: 1, en_title: "SKATEBOARD", zh_title: "滑板", cid: 0},
+  {id: 2, en_title: "BASEBALL BAT", zh_title: "棒球棒", cid: 0},
+
+  {id: 3, en_title: "DECKS", zh_title: "", cid: 1},
+  {id: 4, en_title: "COMPLETE", zh_title: "", cid: 3},
+  {id: 5, en_title: "ACCESSORIES", zh_title: "", cid: 3},
+  {id: 6, en_title: "Double Kick Concave Deck ", zh_title: "", cid: 3},
+  {id: 7, en_title: "Cruiser Deck", zh_title: "", cid: 3},
+  {id: 8, en_title: "Longboarding Deck", zh_title: "", cid: 3},
+  {id: 9, en_title: "Fish Deck", zh_title: "", cid: 3},
+
+  {id: 10, en_title: "COMPLETE", zh_title: "", cid: 1},
+  {id: 11, en_title: "Double Kick Concave Skateboard", zh_title: "", cid: 10},
+  {id: 12, en_title: "Cruiser Skateboard", zh_title: "", cid: 10},
+  {id: 13, en_title: "Longboarding Skateboard", zh_title: "", cid: 10},
+  {id: 14, en_title: "Fish Skateboard", zh_title: "", cid: 10},
+
+  {id: 15, en_title: "ACCESSORIES", zh_title: "", cid: 1},
+  {id: 16, en_title: "Grip Tape", zh_title: "", cid: 15},
+  {id: 17, en_title: "Truck", zh_title: "", cid: 15},
+  {id: 18, en_title: "Wheel", zh_title: "", cid: 15},
+  {id: 19, en_title: "Bearing", zh_title: "", cid: 15},
+  {id: 20, en_title: "Wax", zh_title: "", cid: 15},
+  {id: 21, en_title: "Tools", zh_title: "", cid: 15},
+
+  {id: 22, en_title: "Pro Bat", zh_title: "", cid: 2},
+  {id: 23, en_title: "Fungo Bat", zh_title: "", cid: 2},
+  {id: 24, en_title: "Training Bat", zh_title: "", cid: 2},
+  {id: 25, en_title: "Youth Bat", zh_title: "", cid: 2},
+  {id: 26, en_title: "Trophy Bat", zh_title: "", cid: 2},
+  {id: 27, en_title: "Glove Shaping Mallet", zh_title: "", cid: 2}
+)

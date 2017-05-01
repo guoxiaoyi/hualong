@@ -11,6 +11,10 @@
 #  created_at          :datetime
 #  updated_at          :datetime
 #  brief               :string(255)
+#  en_name             :string(100)
+#  jp_name             :string(100)
+#  ko_name             :string(100)
+#  image_path          :string(255)
 #
 
 require 'test_helper'

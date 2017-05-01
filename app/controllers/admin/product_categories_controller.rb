@@ -69,6 +69,6 @@ class Admin::ProductCategoriesController < Admin::ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_category_params
-      params.require(:product_category).permit(:name)
+      params.require(:product_category).permit(:zh_title,:en_title,:jp_title,:ko_title,:cid)
     end
 end

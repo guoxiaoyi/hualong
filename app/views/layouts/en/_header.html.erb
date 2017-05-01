@@ -1,0 +1,92 @@
+<div class="nav">
+  <%= image_tag "header_logo.jpg", class: "header_logo"%>
+  <ul class="nav-right">
+    <li class="<%= "on" if "#{controller_name}/#{action_name}" == "zh/welcome/index" %>"><%= link_to "HOME ", en_welcome_index_path %></li>
+    <li class="<%= "on" if request.fullpath =~ /organ/ %>"><%= link_to "ABOUT US", en_page_path(:organ) %></li>
+    <li class="<%= "on" if "#{controller_name}/#{action_name}" == "products/index" %>"><%= link_to "OEM&OPM", en_products_path %></li>
+    <li class="<%= "on" if request.fullpath =~ /study/ %>"><%= link_to "QUALTTY", en_article_category_articles_path(:study) %></li>
+    <li class="<%= "on" if request.fullpath =~ /contact_us/ %>"><%= link_to "CONTACT US", en_page_path(:contact_us) %></li>
+  </ul>
+
+
+  <ul class="nav-left navBar">
+    <li id="m1" class="m">
+      <h3><a target="_blank" href="#">SKATEBOARD</a></h3>
+      <div class="sub">
+        <dl>
+           <dt><a href="#">DECKS</a></dt>
+           <dd><a href="#">Double Kick Concave Deck </a></dd>
+           <dd><a href="#">Cruiser Deck</a></dd>
+           <dd><a href="#">Longboarding Deck </a></dd>
+           <dd><a href="#">Fish Deck</a></dd>
+        </dl>
+        <dl>
+           <dt><a href="#">COMPLETE</a></dt>
+           <dd><a href="#">Double Kick Concave Skateboard</a></dd>
+           <dd><a href="#">Cruiser Skateboard</a></dd>
+           <dd><a href="#">Longboarding Skateboard</a></dd>
+           <dd><a href="#">Fish Skateboard</a></dd>
+        </dl>
+
+        <dl>
+           <dt><a href="#">ACCESSORIES</a></dt>
+           <dd><a href="#"> Grip Tape </a></dd>
+           <dd><a href="#">Truck</a></dd>
+           <dd><a href="#">Wheel</a></dd>
+           <dd><a href="#">Bearing</a></dd>
+           <dd><a href="#">Wax</a></dd>
+           <dd><a href="#">Tools</a></dd>
+        </dl>
+      </div>
+
+    </li>
+
+    <li id="m2" class="m">
+      <h3><a target="_blank" href="#">BASEBALL/ SOFTBALL BAT<i></i></a></h3>
+      <div class="sub">
+        <dl>
+           <dt><a href="#">Pro Bat</a></dt>
+        </dl>
+        <dl>
+           <dt><a href="#">Fungo Bat</a></dt>
+        </dl>
+
+        <dl>
+           <dt><a href="#">Training Bat</a></dt>
+        </dl>
+        <dl>
+           <dt><a href="#">Youth Bat </a></dt>
+        </dl>
+        <dl>
+           <dt><a href="#">Trophy Bat</a></dt>
+        </dl>
+        <dl>
+           <dt><a href="#">Glove Shaping Mallet</a></dt>
+        </dl>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="sub-nav"></div>
+<% if @banner %>
+<div class="fullSlide">
+  <div class="bd">
+    <ul>
+      <li style="background:url(<%= asset_path "banner_1.jpg"%>) center top"></li>
+      <li style="background:url(<%= asset_path "banner_1.jpg"%>) center top"></li>
+    </ul>
+  </div>
+  <div class="hd">
+    <ul></ul>
+  </div>
+</div>
+<% else %>
+<div class="banner-line"></div>
+<% end -%>
+<% content_for :script do%>
+<script type="text/javascript">
+  jQuery(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",  autoPlay:true, autoPage:true, trigger:"click" });
+  jQuery(".nav").slide({ type:"menu",  titCell:".m", targetCell:".sub",effect:"slideDown", delayTime:300, triggerTime:0,returnDefault:true  });
+
+</script>
+<% end -%>

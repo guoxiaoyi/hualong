@@ -8,10 +8,10 @@
       <ul class="news_list">
         <% @articles.each do |article|%>
           <li>
-            <h3><%= link_to article.title, article_path(article)  %> </h3>
+            <h3><%= link_to article.title, en_article_path(article)  %> </h3>
             <p>
               <%= article.brief%>
-              <%= link_to "阅读全文&gt;&gt;&nbsp;".html_safe, article_path(article)%>
+              <%= link_to "阅读全文&gt;&gt;&nbsp;".html_safe, en_article_path(article)%>
             </p>
             <div class="time"> 发表于 <%= article.published_at.to_s(:default) if article.published_at-%></div>
           </li>

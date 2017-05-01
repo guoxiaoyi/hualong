@@ -12,13 +12,13 @@
     <%= image_tag "product_banner.jpg", class: "product-list-banner" %>
     <ul>
       <li>
-        <%= link_to product_path(1), class: "product-img" do %>
+        <%= link_to en_product_path(1), class: "product-img" do %>
           <%= image_tag "product_default.jpg"%>
         <% end -%>
         <div class="text">
           <h3>Product Name</h3>
           <p class="brief"> Hello world! </p>
-          <%= link_to "More", product_path(1), class: "more" %>
+          <%= link_to "More", en_product_path(1), class: "more" %>
         </div>
       </li>
     </ul>

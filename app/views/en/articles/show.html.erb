@@ -1,0 +1,18 @@
+<div class="container public">
+  <div class="page-right pull-right">
+    <%= render "layouts/right"%>
+  </div>
+  <div class="content_box">
+    <h1 class="content_tit"><%= @article.title%></h1>
+    <div class="time"><%= @article.published_at.to_s(:default) if @article.published_at%></div>
+    <div class="article_text text">
+      <%= raw @article.content%>
+    </div>
+    <div class="article_up_down">
+    上一篇 :<%= @article.previous.present? ? (link_to @article.previous.title, en_article_path(@article.previous.id) ) : "<a>没有了</a>".html_safe  %>
+      <br>
+      下一篇 :<%= @article.next.present? ? (link_to @article.next.title, en_article_path(@article.next.id) ) : "<a>没有了</a>".html_safe  %>
+    </div>
+  </div>
+  <div class="clr"></div>
+</div>

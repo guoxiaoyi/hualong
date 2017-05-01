@@ -4,22 +4,30 @@ Rails.application.routes.draw do
     resources :product_categories
     resources :products
   end
-
-  get 'welcome/index'
-
-  resources :article_categories, only: [:index, :show],path: 'a' do
-    resources :articles, only: [:index, :show],path: 'list'
+  namespace :zh do
+    get 'welcome/index'
+    resources :article_categories, only: [:index, :show],path: 'a' do
+      resources :articles, only: [:index, :show],path: 'list'
+    end
+    resources :articles, only: [:index, :show]
+    resources :pages, only: [:show], path: 'p'
+    resources :products, only: [:index,:show]
   end
-  resources :articles, only: [:index, :show]
-  resources :pages, only: [:show], path: 'p'
-  resources :products, only: [:index,:show]
+  namespace :en do
+    get 'welcome/index'
+    resources :article_categories, only: [:index, :show],path: 'a' do
+      resources :articles, only: [:index, :show],path: 'list'
+    end
+    resources :articles, only: [:index, :show]
+    resources :pages, only: [:show], path: 'p'
+    resources :products, only: [:index,:show]
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  scope "(:locale)", locale: /zn|en/ do
-    root 'welcome#index'
-  end
+  root 'zh/welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

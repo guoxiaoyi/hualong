@@ -1,4 +1,4 @@
-class WelcomeController < ApplicationController
+class En::WelcomeController < ApplicationController
   before_action :right_page
   def index
   	@banner = true

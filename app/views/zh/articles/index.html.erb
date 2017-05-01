@@ -1,0 +1,28 @@
+<div class="container public">
+  <div class="page-right pull-right">
+    <%= render "layouts/right"%>
+  </div>
+<div class="list">
+  <%= render "layouts/location"%>
+  <%if !@articles.blank?%>
+      <ul class="news_list">
+        <% @articles.each do |article|%>
+          <li>
+            <h3><%= link_to article.title, zh_article_path(article)  %> </h3>
+            <p>
+              <%= article.brief%>
+              <%= link_to "阅读全文&gt;&gt;&nbsp;".html_safe, zh_article_path(article)%>
+            </p>
+            <div class="time"> 发表于 <%= article.published_at.to_s(:default) if article.published_at-%></div>
+          </li>
+        <% end -%>
+      </ul>
+  <% else%>
+    <div class="text-center">
+      还没有内容
+    </div>
+  <%end%>
+  <%= paginate @articles %>
+</div>
+<div class="clr"></div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="product-category">
+    <h3 class="title">CATEGORY</h3>
+    <ul>
+      <li><a href="#"><span></span> BLANK DECKS </a></li>
+      <li><a href="#"><span></span> DECKS </a></li>
+      <li><a href="#"><span></span> COMPLETE </a></li>
+      <li><a href="#"><span></span> ACCESSORIES </a></li>
+    </ul>
+  </div>
+  <div class="oem product-list">
+    <%= image_tag "product_banner.jpg", class: "product-list-banner" %>
+    <ul>
+      <li>
+        <%= link_to zh_product_path(1), class: "product-img" do %>
+          <%= image_tag "product_default.jpg"%>
+        <% end -%>
+        <div class="text">
+          <h3>Product Name</h3>
+          <p class="brief"> Hello world! </p>
+          <%= link_to "More", zh_product_path(1), class: "more" %>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="clr"></div>
+</div>

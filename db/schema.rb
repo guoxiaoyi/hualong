@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170423105548) do
+ActiveRecord::Schema.define(version: 20170501091456) do
 
   create_table "kindeditor_assets", force: true do |t|
     t.string   "asset"
@@ -74,18 +74,20 @@ ActiveRecord::Schema.define(version: 20170423105548) do
     t.string   "cite_key",            limit: 50
     t.string   "copy_from",           limit: 150
     t.datetime "published_at"
+    t.boolean  "hotspot"
   end
 
   create_table "wizcms_article_pages", force: true do |t|
-    t.string   "title",      limit: 100
+    t.string   "title",        limit: 100
     t.text     "content"
     t.boolean  "published"
-    t.string   "cite_key",   limit: 50
+    t.string   "cite_key",     limit: 50
     t.string   "keywords"
-    t.string   "brief",      limit: 200
+    t.string   "brief",        limit: 200
     t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "custom_order"
   end
 
   create_table "wizcms_link_categories", force: true do |t|

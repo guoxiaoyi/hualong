@@ -425,9 +425,82 @@ div.about-nav{
       width:58px;
       height:58px;
       border:1px solid #9f9f9f;
+      cursor:pointer;
+      position: relative;
       &+li{
         margin-top: 7px;
       }
+      &.flash_show:hover div.flash{
+        animation-name: fadeInRight;
+      }
+      &.rfq{
+        div.wrap form{
+          margin:0px;
+          padding:0px;
+          input{
+            margin:0px;
+            padding:0px;
+          }
+          textarea{
+            border:1px solid #9f9f9f;
+            resize:none;
+            width:80%;
+            height:280px;
+            margin-left:10%;
+            box-sizing:border-box;
+            outline: 0;
+            margin-top: 20px;
+            padding:10px;
+          }
+          input[type="text"]{
+            width:80%;
+            height:40px;
+            outline:0;
+            margin-left: 10%;
+            text-indent:10px;
+            box-sizing:border-box;
+          }
+          input[type="submit"]{
+            width:105px;
+            height:40px;
+            margin-top: 5px;
+            cursor: pointer;
+            background:#00176a;
+            border:none;
+            float:right;
+            margin-right: 10%;
+            color:#FFF;
+            font-size: 18px;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+    div.flash{
+      background:#00176a;
+      height:58px;
+      border:1px solid #9f9f9f;
+      position: absolute;
+      right:65px;
+      color:#FFF;
+      font-weight: bold;
+      font-size: 26px;
+      bottom:-1px;
+      padding:0px 20px;
+      line-height: 58px;
+      font-family: Arial;
+      opacity: 0;
+      z-index: -1;
+    }
+    div.wrap{
+      display: none;
+      width:240px;
+      height:410px;
+      position: absolute;
+      background:#FFF;
+      right:65px;
+      bottom:-1px;
+      border:1px solid #9f9f9f;
     }
   }
 }

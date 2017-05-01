@@ -18,8 +18,8 @@
         </td>
         <td class="country" width="20%">
           <h3 class="t">LANGUAGE </h3>
-          <%=link_to "#" do%> <%= image_tag "country.jpg"%> <% end -%>
-          <%=link_to "#" do%> <%= image_tag "country.jpg"%> <% end -%>
+          <%=link_to "/zn" do%> <%= image_tag "country.jpg"%> <% end -%>
+          <%=link_to "en" do%> <%= image_tag "country.jpg"%> <% end -%>
           <%=link_to "#" do%> <%= image_tag "country.jpg"%> <% end -%>
           <%=link_to "#" do%> <%= image_tag "country.jpg"%> <% end -%>
         </td>
@@ -50,10 +50,35 @@
   <ul>
     <li><a href="#"><%= image_tag "facebook.jpg"%></a></li>
     <li><a href="#"><%= image_tag "youtube.jpg"%></a></li>
-    <li>
-      <a href="#"><%= image_tag "rfq.jpg"%></a>
-
+    <li class="rfq show flash_show">
+      <a href="javascript:void(0)" class="rfq"><%= image_tag "rfq.jpg"%></a>
+      <div class="flash animated"> <nobr>Request for Quotationi </nobr></div>
+      <div class="wrap">
+        <form>
+          <textarea></textarea>
+          <input type="text" name="" placeholder="Email">
+          <input type="submit" value="submit RFQ">
+        </form>
+      </div>
     </li>
     <li><a href="#"><%= image_tag "top.jpg"%></a></li>
   </ul>
 </div>
+<% content_for :script do %>
+  <script type="text/javascript">
+
+    $(".left-bar li.rfq a.rfq").click(function(event) {
+      a = $(".left-bar li.rfq").children('div.wrap')
+      b = $(".left-bar li.rfq")
+      if (b.hasClass('show')) {
+        b.removeClass('show');
+        b.addClass('flash_show')
+        a.hide();
+      }else{
+        b.addClass('show');
+        b.removeClass('flash_show')
+        a.show();
+      }
+    });
+  </script>
+<% end -%>

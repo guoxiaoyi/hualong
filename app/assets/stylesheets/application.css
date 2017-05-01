@@ -11,5 +11,6 @@
  * file per style scope.
  *
  *= require 'style'
+ *= require animate.css
  *= require_self
  */

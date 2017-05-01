@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    resources :product_categories
-  end
 
   namespace :admin do
+    resources :product_categories
     resources :products
   end
 
@@ -19,7 +17,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  scope "(:locale)", locale: /zn|en/ do
+    root 'welcome#index'
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

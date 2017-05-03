@@ -1,13 +1,13 @@
 <h1 class="product-category-title">SKATE BOARD</h1>
 <div class="product-list root">
   <ul>
-    <% 8.times do |i|%>
+    <% Product.where(cid: 1).each do |product|%>
     <li>
-      <%= link_to en_product_path(1), class: "img" do %>
-        <%= image_tag "product.jpg"%>
+      <%= link_to en_product_path(product), class: "img" do %>
+        <%= image_tag product.image_path%>
       <% end -%>
-      <%= link_to en_product_path(1), class: "price" do %>
-        <h5 class="name">SKATE BOARD</h5>
+      <%= link_to en_product_path(product), class: "price" do %>
+        <h5 class="name"><%= product.name%></h5>
         <p class="price"><span class="d">200</span><span class="c">139</span></p>
       <% end -%>
     </li>
@@ -18,13 +18,13 @@
 <h1 class="product-category-title">BASEBALL BAT</h1>
 <div class="product-list root">
   <ul>
-    <% 8.times do |i|%>
+    <% Product.where(cid: 2).each do |product|%>
     <li>
-      <%= link_to en_product_path(1), class: "img" do %>
-        <%= image_tag "product.jpg"%>
+      <%= link_to en_product_path(product), class: "img" do %>
+        <%= image_tag product.image_path%>
       <% end -%>
-      <%= link_to en_product_path(1), class: "price" do %>
-        <h5 class="name">SKATE BOARD</h5>
+      <%= link_to en_product_path(product), class: "price" do %>
+        <h5 class="name"><%= product.name%></h5>
         <p class="price"><span class="d">200</span><span class="c">139</span></p>
       <% end -%>
     </li>

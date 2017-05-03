@@ -1,9 +1,11 @@
 <div class="container public">
   <div class="about-nav text-right">
-    <%= link_to "Profile", en_page_path(:profile), class: "#{ 'on' if request.fullpath =~ /^p\/profile/}"%>
-    <%= link_to "TEAM", en_page_path(:team), class: "#{ 'on' if request.fullpath =~ /^p\/profile/}"%>
-    <%= link_to "CULTURE", en_page_path(:culture), class: "#{ 'on' if request.fullpath =~ /^p\/culture/}"%>
-    <%= link_to "EMPLOYEE", en_page_path(:employee), class: "#{ 'on' if request.fullpath =~ /^p\/employee/}"%>
+    <%= link_to "Profile", en_page_path(:EN_PROFILE), class: "#{ 'on' if request.fullpath =~ /^p\/EN_PROFILE/}"%>
+    <%= link_to "TEAM", en_page_path(:EN_TEAM), class: "#{ 'on' if request.fullpath =~ /^p\/EN_TEAM/}"%>
+    <%= link_to "CULTURE PURSUIT", en_page_path(:EN_CULTURE), class: "#{ 'on' if request.fullpath =~ /^p\/EN_CULTURE/}"%>
+    <%= link_to "SPIRIT", en_page_path(:EN_SPIRIT), class: "#{ 'on' if request.fullpath =~ /^p\/EN_SPIRIT/}"%>
+    <%= link_to "STYLE", en_page_path(:EN_STYLE), class: "#{ 'on' if request.fullpath =~ /^p\/EN_STYLE/}"%>
+    <%= link_to "EMPLOYEE", en_page_path(:EN_EMPLOYEE), class: "#{ 'on' if request.fullpath =~ /^p\/EN_EMPLOYEE/}"%>
   </div>
   <div class="page-text">
     <%= raw @page.content %>

@@ -15,6 +15,7 @@
 #  jp_name             :string(100)
 #  ko_name             :string(100)
 #  image_path          :string(255)
+#  cid                 :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

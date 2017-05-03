@@ -69,6 +69,6 @@ class Admin::ProductsController < Admin::ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name,:summary,:video,:product_category_id,:inquiry,:en_name,:jp_name,:ko_name,:image_path)
+      params.require(:product).permit(:name,:summary,:video,:product_category_id,:inquiry,:en_name,:jp_name,:ko_name,:image_path, :cid)
     end
 end

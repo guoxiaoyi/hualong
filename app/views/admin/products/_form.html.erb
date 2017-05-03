@@ -7,9 +7,10 @@
     <%= f.input :jp_name %>
     <%= f.input :ko_name %>
     <%= f.file_field :image_path %>
-    <%= f.input :product_category_id,collection: ProductCategory.all %>
+    <%= f.input :product_category_id,collection: ProductCategory.all.pluck(:en_title,:id) %>
     <%= f.input :summary %>
     <%= f.input :video %>
+    <%= f.input :cid %>
     <%= f.input :inquiry %>
 
   </div>

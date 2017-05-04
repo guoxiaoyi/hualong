@@ -24,7 +24,13 @@
 
 
 <%= yield %>
-<%= render "layouts/en/footer" %>
+<% case %>
+<% when request.fullpath =~ /en/%>
+  <%= render "layouts/en/footer" %>
+<% else %>
+  <%= render "layouts/zh/footer" %>
+<% end -%>
+
 <%= yield :script %>
 </body>
 </html>

@@ -2,7 +2,7 @@
   <%= image_tag "header_logo.jpg", class: "header_logo"%>
   <ul class="nav-right">
     <li class="<%= "on" if "#{controller_name}/#{action_name}" == "zh/welcome/index" %>"><%= link_to "HOME ", en_welcome_index_path %></li>
-    <li class="<%= "on" if request.fullpath =~ /organ/ %>"><%= link_to "ABOUT US", en_page_path(:organ) %></li>
+    <li class="<%= "on" if request.fullpath =~ /organ/ %>"><%= link_to "ABOUT US", en_page_path(:EN_PROFILE) %></li>
     <li class="<%= "on" if "#{controller_name}/#{action_name}" == "products/index" %>"><%= link_to "OEM&OPM", en_products_path %></li>
     <li class="<%= "on" if request.fullpath =~ /study/ %>"><%= link_to "QUALTTY", en_article_category_articles_path(:study) %></li>
     <li class="<%= "on" if request.fullpath =~ /contact_us/ %>"><%= link_to "CONTACT US", en_page_path(:contact_us) %></li>
@@ -73,7 +73,8 @@
   <div class="bd">
     <ul>
       <li style="background:url(<%= asset_path "banner_1.jpg"%>) center top"></li>
-      <li style="background:url(<%= asset_path "banner_1.jpg"%>) center top"></li>
+      <li style="background:url(<%= asset_path "banner_2.jpg"%>) center top"></li>
+      <li style="background:url(<%= asset_path "banner_3.jpg"%>) center top"></li>
     </ul>
   </div>
   <div class="hd">

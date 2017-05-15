@@ -16,19 +16,19 @@
 <!--[if IE 9]><body class="ie ie9 lte9"><![endif]-->
 <!--[if !IE]><!--><body><!--<![endif]-->
 <% case %>
-<% when request.fullpath =~ /en/%>
-  <%= render "layouts/en/header" %>
-<% else %>
+<% when request.fullpath =~ /zh/%>
   <%= render "layouts/zh/header" %>
+<% else %>
+  <%= render "layouts/en/header" %>
 <% end -%>
 
 
 <%= yield %>
 <% case %>
-<% when request.fullpath =~ /en/%>
-  <%= render "layouts/en/footer" %>
-<% else %>
+<% when request.fullpath =~ /zh/%>
   <%= render "layouts/zh/footer" %>
+<% else %>
+  <%= render "layouts/en/footer" %>
 <% end -%>
 
 <%= yield :script %>

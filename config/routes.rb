@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   namespace :admin do
     resources :product_categories
     resources :products
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
     resources :articles, only: [:index, :show]
     resources :pages, only: [:show], path: 'p'
     resources :products, only: [:index,:show]
+    resources :contents
   end
   namespace :en do
     get 'welcome/index'
@@ -21,6 +23,7 @@ Rails.application.routes.draw do
     resources :articles, only: [:index, :show]
     resources :pages, only: [:show], path: 'p'
     resources :products, only: [:index,:show]
+    resources :contents
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

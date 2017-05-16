@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= Content.human_attribute_name(:name) %>:</strong>
+  <%= @content.name %>
+</p>
+
+<p>
+  <strong><%= Content.human_attribute_name(:email) %>:</strong>
+  <%= @content.email %>
+</p>
+
+<p>
+  <strong><%= Content.human_attribute_name(:tel) %>:</strong>
+  <%= @content.tel %>
+</p>
+
+<p>
+  <strong><%= Content.human_attribute_name(:body) %>:</strong>
+  <%= @content.body %>
+</p>
+
+<%= link_to t('buttons.edit'), edit_zh_content_path(@content) %> |
+<%= link_to t('buttons.back'), zh_contents_path %>

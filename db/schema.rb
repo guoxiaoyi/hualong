@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170503125534) do
+ActiveRecord::Schema.define(version: 20170516130952) do
+
+  create_table "contents", force: true do |t|
+    t.string   "name",       limit: 50
+    t.string   "email",      limit: 50
+    t.string   "tel",        limit: 30
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "kindeditor_assets", force: true do |t|
     t.string   "asset"

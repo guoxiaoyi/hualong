@@ -7,5 +7,6 @@ class Zh::WelcomeController < ApplicationController
     @study = PannelList.new(:study, news_hash)
     @news = PannelList.new(:news, news_hash)
     @work = PannelList.new(:work, news_hash)
+    @content = Content.new
   end
 end

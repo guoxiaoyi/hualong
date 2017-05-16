@@ -1,0 +1,2 @@
+module Zh::ContentsHelper
+end

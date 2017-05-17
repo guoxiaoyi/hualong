@@ -4,10 +4,11 @@
       <tr>
         <td width="50%">
           <h3 class="t">CONTACT  WITH  ME</h3>
-          <form action="#" class="email">
-            <input type="text" placeholder="Your Email">
-            <input type="submit">
-          </form>
+          <%= simple_form_for([:en, @content], wrapper: :bootstrap3, html: {class: "email"}, remote: true) do |f| %>
+            <%#= f.error_notification %>
+            <%= f.input :email, placeholder: "Your Email", as: :string %>
+            <%= f.button :submit %>
+          <% end %>
         </td>
         <td class="society" width="30%">
           <h3 class="t">FIND US ON </h3>
@@ -71,6 +72,16 @@
 </div>
 <% content_for :script do %>
   <script type="text/javascript">
+
+
+    $("#new_content .btn").click(function(event) {
+      event.preventDefault()
+      if ($("#content_email").val() != "") {
+        $("#new_content").submit()
+      }else{
+        alert("E-mail cannot be empty")
+      }
+    });
 
     $(".left-bar li.rfq a.rfq").click(function(event) {
       a = $(".left-bar li.rfq").children('div.wrap')

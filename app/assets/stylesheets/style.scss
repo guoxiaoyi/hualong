@@ -121,10 +121,12 @@ div.root.product-list{
       }
       a.img{
         display: block;
-        width:276px;
-        height:305px;
+        width:274px;
+        height:303px;
+        border:1px solid #c0c0c0;
         margin-bottom: 15px;
         img{
+          width:100%;
           vertical-align: middle;
         }
       }

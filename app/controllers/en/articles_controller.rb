@@ -7,10 +7,12 @@ class En::ArticlesController < ApplicationController
     else
       @articles = WizcmsArticle::Article.all.order("published_at desc").page( params[:page] )
     end
+    @content = Content.new
   end
 
   def show
     @article = WizcmsArticle::Article.get( params[:id] )
+    @content = Content.new
   end
   private
     def get_articles_category

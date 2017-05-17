@@ -12,6 +12,6 @@
 #
 
 class Content < ActiveRecord::Base
-  validates :email, :tel, presence: true
+  # validates :email, :tel, presence: true
 
 end

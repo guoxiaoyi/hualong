@@ -25,10 +25,10 @@ class En::ContentsController < ApplicationController
   # POST /en/contents.json
   def create
     @content = Content.new(content_params)
-
     respond_to do |format|
       if @content.save
         format.html { redirect_to [:en, @content], notice: 'Content was successfully created.' }
+        format.js{ render :create_success }
         format.json { render action: 'show', status: :created, location: @content }
       else
         format.html { render action: 'new' }

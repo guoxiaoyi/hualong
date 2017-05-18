@@ -52,14 +52,22 @@ div.nav{
   .navBar .sub li{ text-align:left;  }
   .navBar .sub li a{ color:#333; display:block; zoom:1;}
   .navBar .sub li a:hover{  background:#ddd; color:#c00;   }
-  .navBar .sub dl{ display:inline-block; *display:inline; zoom:1; vertical-align:top; padding:15px 29px; line-height:26px;}
+  .navBar .sub dl{ display:inline-block; *display:inline; zoom:1; vertical-align:top; padding:15px 29px; line-height:26px;
+    padding-top:0px;margin-top:0px;}
+  .navBar .sub dt img{ margin-bottom:10px;}
   .navBar .sub dl a:hover{ color:#c00;  }
-  .navBar .sub dl dt a{ color:#000;  }
+  .navBar .sub dl dt a{ color:#000; display:block; }
   .navBar .sub dl dt {text-align:center;font-weight:bold;font-size:20px;margin-bottom:10px;}
   .navBar .sub dl dd a{ color:#999; padding-left:7px; }
   .navBar .sub dl dd{margin:0px;padding:0px;}
 
-  .navBar #m2 .sub{ z-index:1; left:-192px;  }
+  .navBar #m2 .sub{
+    z-index:1;
+    left:-192px;
+    dl dt img{
+      width:100px;
+    }
+  }
   ul.nav-left{
     float: left;
     // li{

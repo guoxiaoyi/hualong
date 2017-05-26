@@ -1,18 +1,20 @@
 <table class="table table-hover table-bordered">
   <thead>
     <tr>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>ID</th>
+      <th>名称</th>
+      <th>操作</th>
     </tr>
   </thead>
 
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= link_to t('actions.show'), [:admin, product] %></td>
-        <td><%= link_to t('actions.edit'), edit_admin_product_path(product) %></td>
-        <td><%= link_to t('actions.destroy'), [:admin, product], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= product.id%></td>
+        <td><%= product.name%></td>
+        <td><%= link_to t('actions.show'), [:admin, product] %>
+        <%= link_to t('actions.edit'), edit_admin_product_path(product) %>
+        <%= link_to t('actions.destroy'), [:admin, product], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

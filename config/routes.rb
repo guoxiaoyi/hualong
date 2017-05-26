@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
 
+
   namespace :admin do
     resources :product_categories
     resources :products
+    resources :contents
   end
   namespace :zh do
     get 'welcome/index'

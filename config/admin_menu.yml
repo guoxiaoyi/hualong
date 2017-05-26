@@ -30,3 +30,4 @@ admin_menu:
         engine: wizcms_link
       - model: category
         engine: wizcms_link
+  - model: content

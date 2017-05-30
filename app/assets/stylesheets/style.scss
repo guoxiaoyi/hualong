@@ -150,6 +150,9 @@ div.root.product-list{
           line-height: 45px;
           color:#262626;
           font-size:14px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
         }
         display: block;
         text-align: center;
@@ -340,13 +343,14 @@ div.address{
         display: inline-block;
         width:10px;
         height:10px;
-        vertical-align: middle;
         background:#000;
         vertical-align: middle;
         margin-top: -3px;
         margin-right: 10px;
       }
     }
+    h5{padding-left:25px; }
+    h6{padding-left:45px; }
   }
 }
 img.product-list-banner{
@@ -357,31 +361,51 @@ img.product-list-banner{
   float:left;
   width:855px!important;
   margin-left: 21px;
-  ul {
+  ul{
+    overflow: hidden;
     li{
-      overflow: hidden;
-      font-family: Arial;
-      margin-top: 60px;
+      float:left;
+      width:276px;
+      margin-right:12px;
+      margin-bottom: 60px;
+      &:nth-child(3n){
+        margin-right: 0px;
+      }
+      a.img{
+        display: block;
+        width:100%;
+        height:303px;
+        border:1px solid #c0c0c0;
+        margin-top: 15px;
+        img{
+          width:100%;
+          vertical-align: middle;
+        }
+      }
+      a.price{
+        font-family: Arial;
+        h5{
+          line-height: 45px;
+          color:#262626;
+          font-size:14px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        display: block;
+        text-align: center;
+        p.price span{
+          margin:0 10px;
+        }
+        p.price span.d{
+          color:#7e7e7e;
+          text-decoration:line-through;
+        }
+        p.price span.c{
+          color:#b67a5f;
+        }
+      }
     }
-  }
-  a.product-img{
-    display: block;
-    width:390px;
-    height:235px;
-    float: left;
-    margin-right: 32px;
-  }
-  a.more{
-    display: block;
-    width:199px;
-    height:49px;
-    border-radius:5px;
-    background:#0851ae;
-    color:#FFF;
-    text-align: center;
-    line-height: 49px;
-    font-size: 20px;
-    margin-top: 24px;
   }
   div.text{
     float: left;

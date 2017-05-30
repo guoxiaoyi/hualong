@@ -18,17 +18,23 @@
   <div class="oem product-list">
     <%= image_tag "product_banner.jpg", class: "product-list-banner" %>
     <ul>
+    <% @products.each do |product|%>
       <li>
-        <%= link_to en_product_path(1), class: "product-img" do %>
-          <%= image_tag "product_default.jpg"%>
+        <%= link_to en_product_path(product), class: "img" do %>
+          <%= image_tag product.image_path%>
         <% end -%>
-        <div class="text">
-          <h3>Product Name</h3>
-          <p class="brief"> Hello world! </p>
-          <%= link_to "More", en_product_path(1), class: "more" %>
-        </div>
+        <%= link_to en_product_path(product), class: "price" do %>
+          <h5 class="name"><%= product.en_name%></h5>
+          <!-- <p class="price"><span class="d">200</span><span class="c">139</span></p> -->
+        <% end -%>
       </li>
+    <% end -%>
     </ul>
   </div>
   <div class="clr"></div>
 </div>
+<% content_for :script do %>
+<script type="text/javascript">
+  alert(1)
+</script>
+<% end -%>

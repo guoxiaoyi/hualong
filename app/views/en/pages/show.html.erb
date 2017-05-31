@@ -1,10 +1,8 @@
 <div class="container public">
 
-  <% if request.fullpath =~ /en\/p\/en_profile/ %>
-
-
+  <% if request.fullpath =~ /(en\/p\/en_profile|en\/p\/en_team|en\/p\/en_culture)/ %>
     <div class="about-nav text-right">
-      <%= link_to "Profile", en_page_path(:EN_PROFILE), class: "#{ 'on' if request.fullpath =~ /en\/p\/en_profile/}"%>
+      <%= link_to "Profile", en_page_path(:en_profile), class: "#{ 'on' if request.fullpath =~ /en\/p\/en_profile/}"%>
       <%= link_to "TEAM", en_page_path(:en_team), class: "#{ 'on' if request.fullpath =~ /en\/p\/en_team/}"%>
       <%= link_to "CULTURE PURSUIT", en_page_path(:en_culture), class: "#{ 'on' if request.fullpath =~ /en\/p\/en_culture/}"%>
       <%#= link_to "SPIRIT", en_page_path(:EN_SPIRIT), class: "#{ 'on' if request.fullpath =~ /en\/p\/EN_SPIRIT/}"%>

@@ -2,11 +2,11 @@
   <%= image_tag "header_logo.jpg", class: "header_logo"%>
   <ul class="nav-right">
     <li class="<%= "on" if "#{controller_name}/#{action_name}" == "en/welcome/index" %>"><%= link_to "HOME ", en_welcome_index_path %></li>
-    <li class="<%= "on" if request.fullpath =~ /organ/ %>"><%= link_to "ABOUT US", en_page_path(:EN_PROFILE) %></li>
-    <li class="<%= "on" if request.fullpath =~ /contact_us/ %>"><%= link_to "PRODUCT", "javascript:void(0)" %></li>
+    <li class="<%= "on" if request.fullpath =~ /organ/ %>"><%= link_to "ABOUT US", en_page_path(:en_profile) %></li>
+    <li class="<%= "on" if "#{controller_name}/#{action_name}" == "products" %>"><%= link_to "PRODUCT", en_products_path %></li>
     <li class="<%= "on" if "#{controller_name}/#{action_name}" == "products/index" %>"><%= link_to "STRATEGIC PARTNER", en_products_path %></li>
     <li class="<%= "on" if request.fullpath =~ /study/ %>"><%= link_to "QUALTTY", en_article_category_articles_path(:study) %></li>
-    <li class="<%= "on" if request.fullpath =~ /contact_us/ %>"><%= link_to "CONTACT US", "javascript:void(0)" %></li>
+    <li class="<%= "on" if request.fullpath =~ /en_contact_us/ %>"><%= link_to "CONTACT US", en_page_path(:en_contact_us) %></li>
   </ul>
 
 

@@ -12,6 +12,16 @@
   <% end %>
   <div class="page-text">
     <%= raw @page.try(:content) %>
+    <% if request.fullpath =~ /(en\/p\/en_contact_us)/ %>
+      <%= simple_form_for([:en, @content], wrapper: :bootstrap3, html: {class: "email"}, remote: true) do |f| %>
+        <%#= f.error_notification %>
+        <%= f.input :name, placeholder: "Your Name", as: :string %>
+        <%= f.input :email, placeholder: "Your Email", as: :string %>
+        <%= f.input :tel, placeholder: "Your Tel", as: :string %>
+        <%= f.text_field :body%>
+        <%= f.button :submit %>
+      <% end %>
+    <% end -%>
   </div>
 
 

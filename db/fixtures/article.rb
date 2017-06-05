@@ -82,3 +82,4 @@ ProductCategory.seed(:id,
   {id: 29, en_title: "Youth Bat", zh_title: "少年棒", cid: 25},
   {id: 30, en_title: "Trophy Bat", zh_title: "练习棒", cid: 25},
   {id: 31, en_title: "Glove Shaping Mallet", zh_title: "手套塑形锤", cid: 25}
+)

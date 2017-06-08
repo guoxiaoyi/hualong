@@ -8,10 +8,28 @@
     <%= f.input :ko_name %>
     <%= f.file_field :image_path %>
     <%= f.input :product_category_id,collection: ProductCategory.all.pluck(:en_title,:id) %>
-    <%= f.input :summary %>
+
+
+    <label>summary</label>
+
+    <%= if Gem::Specification.find_all_by_name('rails_kindeditor').length >= 1
+          f.input :summary, :as => :kindeditor, :label => false, :input_html => { :width => '100%', :height => 300 }
+        else
+          f.input :summary, as: :text, input_html: { width: '100%', rows: 20 }
+        end
+    %>
+
+    <%#= f.input :summary %>
     <%= f.input :video %>
     <%= f.input :cid %>
-    <%= f.input :inquiry %>
+    <%#= f.input :inquiry %>
+    <label>inquiry</label>
+    <%= if Gem::Specification.find_all_by_name('rails_kindeditor').length >= 1
+          f.input :inquiry, :as => :kindeditor, :label => false, :input_html => { :width => '100%', :height => 300 }
+        else
+          f.input :inquiry, as: :text, input_html: { width: '100%', rows: 20 }
+        end
+    %>
 
   </div>
 

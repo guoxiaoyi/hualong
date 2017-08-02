@@ -9,7 +9,11 @@
     </ul>
   </div>
   <div class="oem product-show">
-    <%= image_tag "product_banner.jpg", class: "product-list-banner"%>
+    <div class="product-data">
+      <h3 class="product-title"><%= @product.en_name%></h3>
+    </div>
+    <%= image_tag @product.image_path, class: "product-banner"%>
+    <div class="clr"></div>
     <div class="hd">
       <ul>
         <li class="on">PRODUCT SUMMARY</li>

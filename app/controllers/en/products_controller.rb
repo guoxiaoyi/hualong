@@ -9,6 +9,7 @@ class En::ProductsController < ApplicationController
     end
   end
   def show
+    @product = Product.find(params[:id])
     @content = Content.new
   end
 end

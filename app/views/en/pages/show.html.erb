@@ -10,7 +10,7 @@
       <%#= link_to "EMPLOYEE", en_page_path(:EN_EMPLOYEE), class: "#{ 'on' if request.fullpath =~ /en\/p\/EN_EMPLOYEE/}"%>
     </div>
   <% end %>
-  <div class="page-text">
+  <div class="page-text <%= "page_map" if request.fullpath =~ /(en\/p\/en_contact_us)/%>">
     <%= raw @page.try(:content) %>
     <% if request.fullpath =~ /(en\/p\/en_contact_us)/ %>
       <%= simple_form_for([:en, @content], wrapper: :bootstrap3, html: {class: "email"}, remote: true) do |f| %>
@@ -18,8 +18,8 @@
         <%= f.input :name, placeholder: "Your Name", as: :string %>
         <%= f.input :email, placeholder: "Your Email", as: :string %>
         <%= f.input :tel, placeholder: "Your Tel", as: :string %>
-        <%= f.text_field :body%>
-        <%= f.button :submit %>
+        <%= f.input :body%>
+        <%= f.button :submit, "SUBMIT", class: "o"%>
       <% end %>
     <% end -%>
   </div>

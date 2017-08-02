@@ -357,6 +357,24 @@ img.product-list-banner{
   width:100%;
 }
 
+img.product-banner{
+  width:50%;
+  float: left;
+}
+div.product-data{
+  width:385px;
+  float:right;
+  border:1px solid #dadada;
+  min-height:200px;
+  padding:15px;
+  h3.product-title{
+    color:#000b19;
+    display: block;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
 .oem.product-list{
   float:left;
   width:855px!important;
@@ -578,4 +596,64 @@ div.about-nav{
 }
 .displayNone{
   display: none;
+}
+.simple_form.email{
+  width:800px;
+  font-family: "arial";
+  div.form-group.content_name,div.form-group.content_email,div.form-group.content_tel{
+    width:50%;
+    float: left;
+    overflow: hidden;
+    height:37px;
+    line-height: 37px;
+    margin:10px 0px;
+    input{
+      width:300px;
+      height:35px;
+      outline: 0;
+      text-indent:10px;
+      float:right;
+      border:1px solid #ccc;
+    }
+    label{
+      display: block;
+      float: left;
+      width:80px;
+      padding-right:0px;
+      text-align: right;
+    }
+  }
+  div.form-group.text.optional.content_body{
+    width:100%;
+    clear:both;
+    overflow: hidden;
+    margin:10px 0px;
+    label{
+      display: block;
+      width:100%;
+      text-indent:45px;
+    }
+    textarea{
+      resize: none;
+      outline: 0;
+      border:1px solid #ccc;
+      width:698px;
+      height:100px;
+      float: right;
+    }
+  }
+  input.btn.o{
+    width:100px;
+    height:30px;
+    background:#000b19;
+    color:#FFF;
+    border:none;
+    margin:15px 0px;
+    margin-left: 98px;
+  }
+}
+div.page_map{
+  margin-top: -70px;
+  padding-top:350px;
+  background:asset-url("page_map.jpg") no-repeat top center;
 }

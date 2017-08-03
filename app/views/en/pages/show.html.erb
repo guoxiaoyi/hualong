@@ -11,7 +11,6 @@
     </div>
   <% end %>
   <div class="page-text <%= "page_map" if request.fullpath =~ /(en\/p\/en_contact_us)/%>">
-    <%= raw @page.try(:content) %>
     <% if request.fullpath =~ /(en\/p\/en_contact_us)/ %>
       <%= simple_form_for([:en, @content], wrapper: :bootstrap3, html: {class: "email"}, remote: true) do |f| %>
         <%#= f.error_notification %>
@@ -22,6 +21,7 @@
         <%= f.button :submit, "SUBMIT", class: "o"%>
       <% end %>
     <% end -%>
+    <%= raw @page.try(:content) %>
   </div>
 
 

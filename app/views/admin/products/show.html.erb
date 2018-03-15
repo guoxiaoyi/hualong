@@ -1,20 +1,24 @@
 <p id="notice"><%= notice %></p>
 <table class="table table-bordered">
   <tr>
-    <td>Name</td>
+    <td>名称</td>
     <td><%= @product.name%></td>
   </tr>
   <tr>
-    <td>ProductCategory</td>
-    <td><%= @product.product_category_id%></td>
+    <td>图片</td>
+    <td><%= image_tag @product.image_path%></td>
   </tr>
   <tr>
-    <td>Summary</td>
+    <td>配料</td>
     <td><%= @product.summary%></td>
   </tr>
   <tr>
-    <td>Video url</td>
-    <td><%= @product.video%></td>
+    <td>简介</td>
+    <td><%= @product.inquiry%></td>
+  </tr>
+  <tr>
+    <td>价格</td>
+    <td><%= @product.video %></td>
   </tr>
 </table>
 

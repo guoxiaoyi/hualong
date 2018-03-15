@@ -1,12 +1,10 @@
 class Zh::WelcomeController < ApplicationController
-  before_action :right_page
   def index
-  	@banner = true
-    news_hash = {title_length: 22, style: 'panel-info', head_prefix: '', with_time: true}
-    @bbs = PannelList.new(:bbs, news_hash)
-    @study = PannelList.new(:study, news_hash)
-    @news = PannelList.new(:news, news_hash)
-    @work = PannelList.new(:work, news_hash)
-    @content = Content.new
+    @content_us = WizcmsArticle::Page.get(:zh_contact_us)
+    @history = WizcmsArticle::Page.get(:zh_history)
+    @products = ProductCategory.find_by(cid: 1).products
+    @news = WizcmsArticle::ArticleCategory.get( "zh_news" ).articles
+    @notice = WizcmsArticle::ArticleCategory.get( "zh_notice" ).articles
+
   end
 end

@@ -3,6 +3,8 @@
 <head>
   <title><%= yield :title %></title>
   <meta charest="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -18,17 +20,25 @@
 <% case %>
 <% when request.fullpath =~ /zh/%>
   <%= render "layouts/zh/header" %>
-<% else %>
+<% when request.fullpath =~ /en/%>
   <%= render "layouts/en/header" %>
+<% else %>
+  <%= render "layouts/jp/header" %>
 <% end -%>
 
 
 <%= yield %>
+
+
+
+
 <% case %>
 <% when request.fullpath =~ /zh/%>
   <%= render "layouts/zh/footer" %>
-<% else %>
+<% when request.fullpath =~ /en/%>
   <%= render "layouts/en/footer" %>
+<% else %>
+  <%= render "layouts/jp/footer" %>
 <% end -%>
 
 <%= yield :script %>

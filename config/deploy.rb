@@ -1,14 +1,14 @@
 # config valid only for Capistrano 3.1
 
-set :application, 'obor100'
-set :repo_url, 'git@github.com:guoxiaoyi/hualong.git'
+set :application, 'jinweide'
+set :repo_url, 'git@git.wityun.com:guoxiaoyi/jinweide-tokyo.git'
 # set :port, 23
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/var/www/obor100'
+set :deploy_to, '/var/www/jinweide-tokyo.jp'
 
 # Default value for :scm is :git
 # set :scm, :git

@@ -1,10 +1,10 @@
-source 'https://rubygems.org'
+source 'https://gems.ruby-china.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use mysql as the database for Active Record
-gem 'mysql2', '~> 0.3.13'
+gem 'pg', '~> 0.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -65,7 +65,7 @@ group :development, :test do
 end
 gem 'gitlab'
 
-gem 'bootstrap-sass', '~> 3.1.1'
+# gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'simple_form'
 

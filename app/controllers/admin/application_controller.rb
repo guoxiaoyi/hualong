@@ -3,7 +3,7 @@ class Admin::ApplicationController < ApplicationController
   layout 'admin'
 
 
-  before_filter :auth_redirect, except: [ :login, :create_session, :destroy_session]
+  before_action :auth_redirect, except: [ :login, :create_session, :destroy_session]
 
   helper_method :current_manager
 

@@ -9,6 +9,7 @@
 #  body       :text
 #  created_at :datetime
 #  updated_at :datetime
+#  title      :string(60)
 #
 
 require 'test_helper'

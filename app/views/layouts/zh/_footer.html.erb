@@ -1,92 +1,14 @@
-<div class="footer text-center">
+
+<div class="footer">
   <div class="container">
-    <table cellspacing="0" cellpadding="0">
-      <tr>
-        <td width="50%">
-          <h3 class="t">CONTACT  WITH  ME</h3>
-          <%= simple_form_for([:zh, @content], wrapper: :bootstrap3, html: {class: "email"}) do |f| %>
-            <%= f.error_notification %>
-            <%= f.input :email, placeholder: "Your Email", as: :string %>
-
-            <%= f.button :submit %>
-          <% end %>
-
-        </td>
-        <td class="society" width="30%">
-          <h3 class="t">FIND US ON </h3>
-          <%=link_to "#", class: "twitter" do%> <%= image_tag "twitter.png"%> <% end -%>
-          <%=link_to "#", class: "facebook" do%> <%= image_tag "facebook.png"%> <% end -%>
-          <%=link_to "#", class: "youtube" do%> <%= image_tag "youtube.png"%> <% end -%>
-          <%=link_to "#", class: "google" do%> <%= image_tag "google.png"%> <% end -%>
-        </td>
-        <td class="country" width="20%">
-          <h3 class="t">LANGUAGE </h3>
-          <%=link_to zh_welcome_index_path do%> <%= image_tag "country.jpg"%> <% end -%>
-          <%=link_to en_welcome_index_path do%> <%= image_tag "en.jpg"%> <% end -%>
-          <%=link_to "#" do%> <%= image_tag "jp.jpg"%> <% end -%>
-          <%=link_to "#" do%> <%= image_tag "country.jpg"%> <% end -%>
-        </td>
-      </tr>
-    </table>
-    <div class="address pull-right">
-      <%= image_tag "footer_logo.png"%>
-      <div>Mob: +86-15642530015</div>
-      <div>Tel: +86-411-68839526</div>
-      <div>Fax: +86-411-83156000</div>
-      <div>Email: hualong@gmail.com</div>
-      <div>Add: Taiping Industrial District, Puwan New Area, <br> Dalian City, Liaoning Province, China.</div>
-      <div>Skype: Huahong Sports Tool</div>
+    <div class="row">
+      <span class="pull-right">up</span>
+      <span class="pull-left">浏览量：890</span>
+      <div class="language text-center">
+        <%= link_to "日本語", jp_welcome_index_path, class: "btn btn-primary btn-sm active",  role: "button" %>
+        <%= link_to "English", en_welcome_index_path, class: "btn btn-primary btn-sm active",  role: "button"%>
+        <%= link_to "中文", zh_welcome_index_path, class: "btn btn-primary btn-sm active",  role: "button"%>
+      </div>
     </div>
-    <dl>
-      <dt>PRODUCT</dt>
-      <dd><a href="#">skate board</a></dd>
-      <dd><a href="#">base ball bat</a></dd>
-    </dl>
-    <dl>
-      <dt>HOME</dt>
-      <dd><a href="#">about us</a></dd>
-      <dd><a href="#">oem & odm</a></dd>
-      <dd><a href="#">qality</a></dd>
-    </dl>
-    <div class="clr"></div>
   </div>
 </div>
-<div class="left-bar">
-  <ul>
-    <li><a href="https://www.facebook.com/huahongsportstool/" target="blank"><%= image_tag "facebook.jpg"%></a></li>
-    <li class="youtube">
-      <a href="#"><%= image_tag "youtube.jpg"%></a>
-      <div class="video"><iframe height=315 width=560 src='http://player.youku.com/embed/XMjcwMjk1NDM2OA==' frameborder=0 'allowfullscreen'></iframe></div>
-    </li>
-    <li class="rfq flash_show">
-      <a href="javascript:void(0)" class="rfq"><%= image_tag "rfq.jpg"%></a>
-      <div class="flash animated"> <nobr>Request for Quotationi </nobr></div>
-      <div class="wrap">
-        <form>
-          <textarea placeholder="I want to purchase:"></textarea>
-          <input type="text" name="" placeholder="Email">
-          <input type="submit" value="submit RFQ">
-        </form>
-      </div>
-    </li>
-    <li><a href="#"><%= image_tag "top.jpg"%></a></li>
-  </ul>
-</div>
-<% content_for :script do %>
-  <script type="text/javascript">
-
-    $(".left-bar li.rfq a.rfq").click(function(event) {
-      a = $(".left-bar li.rfq").children('div.wrap')
-      b = $(".left-bar li.rfq")
-      if (b.hasClass('show')) {
-        b.removeClass('show');
-        b.addClass('flash_show')
-        a.hide();
-      }else{
-        b.addClass('show');
-        b.removeClass('flash_show')
-        a.show();
-      }
-    });
-  </script>
-<% end -%>

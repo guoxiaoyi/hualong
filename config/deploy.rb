@@ -2,6 +2,7 @@
 
 set :application, 'jinweide'
 set :repo_url, 'git@git.wityun.com:guoxiaoyi/jinweide-tokyo.git'
+set :branch, :master
 # set :port, 23
 
 # Default branch is :master
